@@ -1,0 +1,17 @@
+class Main {
+	
+	function void main() {
+		var MoveBoxes tutorial;
+		
+		do Output.printString("Are you ready? Game will start later.");
+		do Output.println();
+
+		do Sys.wait(1000);
+		
+		let tutorial = MoveBoxes.new(5, 5, "4444440034402044100444444", 100, 100);
+
+		do tutorial.run();
+
+		return;
+	}
+}
