@@ -46,6 +46,7 @@ class MoveBoxes {
 
 			let i = i + 1;
 		}
+		return ;
 	}
 
 	method void run() {
@@ -129,5 +130,6 @@ class MoveBoxes {
 				exit = true;
 			}
 		}
+		return ;
 	}
 }
