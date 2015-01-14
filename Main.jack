@@ -10,6 +10,7 @@ class Main {
 		
 		let tutorial = MoveBoxes.new(5, 5, "4444440034402044100444444", 100, 100);
 
+		do tutorial.init();
 		do tutorial.run();
 
 		return;

@@ -14,8 +14,6 @@ class MoveBoxes {
 		let wall = Wall.new(ref_x, ref_y);
 		let box = Box.new(ref_x, ref_y);
 
-		do init();
-
 		return this;
 	}
 	
