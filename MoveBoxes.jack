@@ -125,7 +125,7 @@ class MoveBoxes {
 
 			let key = Keyboard.keyPressed();
 			if(key = 81) {
-				exit = true;
+				let exit = true;
 			}
 		}
 		return ;
