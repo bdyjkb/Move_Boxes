@@ -3,7 +3,7 @@ class Box {
     field int unit;
     field String img;
     field int ref_x, ref_y;
-    field int x, y;
+    
     constructor Box new(int x, int y){
         let unit = 10;
         let ref_x = x;
@@ -11,14 +11,14 @@ class Box {
         return this;
     }
     
-    method void draw(){
+    method void draw(int x, int y){
         var int i;
         do Screen.setColor(true);
 		do Screen.drawRectangle((ref_x + x * unit), (ref_y + y * unit), (ref_x + (x+1)*unit), (ref_y + (y+1)*unit));
         return;
     }
 
-    method void wipe(){
+    method void wipe(int x, int y){
         var int i;
         do Screen.setColor(false);
 		do Screen.drawRectangle((ref_x + x * unit), (ref_y + y * unit), (ref_x + (x+1)*unit), (ref_y + (y+1)*unit));
@@ -26,12 +26,8 @@ class Box {
     }
 
     method void move(int now_x, int now_y, int next_x, int next_y){
-        let x = now_x;
-        let y = now_y;
-        do wipe();
-		let x = next_x;
-		let y = next_y;
-        do draw();
+        do wipe(now_x, now_y);
+        do draw(next_x, next_y);
 		return;
     }
 }
