@@ -1,0 +1,18 @@
+class Wall {
+	
+	field int ref_x, ref_y;
+	field int unit;
+	
+	constructor Wall new(int x, int y){
+		let ref_x = x;
+		let ref_y = y;
+		let unit = 10;
+		return this;
+	}
+
+	method void draw(int x, int y){
+		do Screen.setColor(true);
+		do Output.drawRectangle((ref_x + x * unit), (ref_y + y * unit), (ref_x + (x+1)*unit), (ref_y + (y+1)*unit));
+		return;
+	}
+}
