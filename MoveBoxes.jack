@@ -31,17 +31,17 @@ class MoveBoxes {
 
 			let type = map.charAt(i) - 48;
 			if(type = 4) {
-				wall.draw(now_x, now_y);
+				do wall.draw(now_x, now_y);
 			}
 			if(type = 2) {
-				box.draw(now_x, now_y);
+				do box.draw(now_x, now_y);
 			}
 			if(type = 1) {
-				player.draw(now_x, now_y);
-				player.set_pos(now_x, now_y);
+				do player.draw(now_x, now_y);
+				do player.set_pos(now_x, now_y);
 			}
 			if(type = 3) {
-				wall.draw_dest(now_x, now_y);
+				do wall.draw_dest(now_x, now_y);
 			}
 
 			let i = i + 1;
@@ -108,8 +108,8 @@ class MoveBoxes {
 				do player.move(now_x, now_y);
 				do player.set_pos(now_x, now_y);
 
-				map.setCharAt(pos_x * row_length + pos_y, 0 + 48);
-				map.setCharAt(now_x * row_length + now_y, 1 + 48); 
+				do map.setCharAt(pos_x * row_length + pos_y, 0 + 48);
+				do map.setCharAt(now_x * row_length + now_y, 1 + 48); 
 			}
 			if(type = 2) {
 				if(map.charAt(next_x * row_length + next_y) = 0) {
@@ -117,9 +117,9 @@ class MoveBoxes {
 					do player.move(now_x, now_y);
 					do player.set_pos(now_x, now_y);
 					
-					map.setCharAt(pos_x * row_length + pos_y, 0 + 48):
-					map.setCharAt(now_x * row_length + now_y, 1 + 48);
-					map.setCharAt(next_x * row_length + next_y, 2 + 48);
+					do map.setCharAt(pos_x * row_length + pos_y, 0 + 48):
+					do map.setCharAt(now_x * row_length + now_y, 1 + 48);
+					do map.setCharAt(next_x * row_length + next_y, 2 + 48);
 				}
 			}
 			if(type = 3) {
