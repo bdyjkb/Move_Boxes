@@ -25,7 +25,7 @@ class MoveBoxes {
 		let i = 0;
 		while(i < (row_length * column_length)) {
 			let now_x = i / row_length;
-			let now_y = i % row_length;
+			let now_y = i - (now_x * row_length);
 
 			let type = map.charAt(i) - 48;
 			if(type = 4) {

@@ -39,4 +39,11 @@ class Player {
         do draw();
 		return;
     }
+
+	method int get_x(){
+		return x;
+	}
+	method int get_y(){
+		return y;
+	}
 }
