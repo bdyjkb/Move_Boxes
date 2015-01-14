@@ -5,8 +5,10 @@ class Player {
     field String img;
     field int ref_x, ref_y;
 
-    constructor Player new(int ref_x, int ref_y){
+    constructor Player new(int x, int y){
         let unit = 10;
+        let ref_x = x;
+        let ref_y = y;
         return this;
     }
 
