@@ -4,8 +4,8 @@ class Box {
     field String img;
     field int ref_x, ref_y;
     
-    constructor Box new(int x, int y){
-        let unit = 10;
+    constructor Box new(int x, int y, int u){
+        let unit = u;
         let ref_x = x;
         let ref_y = y;
         return this;
@@ -14,14 +14,14 @@ class Box {
     method void draw(int x, int y){
         var int i;
         do Screen.setColor(true);
-		do Screen.drawRectangle((ref_x + x * unit), (ref_y + y * unit), (ref_x + (x+1)*unit), (ref_y + (y+1)*unit));
+		do Screen.drawRectangle((ref_x + (x * unit)), (ref_y + (y * unit)), (ref_x + ((x+1)*unit)), (ref_y + ((y+1)*unit)));
         return;
     }
 
     method void wipe(int x, int y){
         var int i;
         do Screen.setColor(false);
-		do Screen.drawRectangle((ref_x + x * unit), (ref_y + y * unit), (ref_x + (x+1)*unit), (ref_y + (y+1)*unit));
+		do Screen.drawRectangle((ref_x + (x * unit)), (ref_y + (y * unit)), (ref_x + ((x+1)*unit)), (ref_y + ((y+1)*unit)));
         return;
     }
 

@@ -7,8 +7,9 @@ class Main {
 		do Output.println();
 
 		do Sys.wait(1000);
+		do Screen.clearScreen();
 		
-		let tutorial = MoveBoxes.new(5, 5, "4444440034402044100444444", 100, 100);
+		let tutorial = MoveBoxes.new(8, 8, "4444444444400034402000044000440440020004400002044100000444444444", 20, 20, 15);
 
 		do tutorial.init();
 		do tutorial.run();
