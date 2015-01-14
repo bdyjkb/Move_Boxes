@@ -15,4 +15,10 @@ class Wall {
 		do Output.drawRectangle((ref_x + x * unit), (ref_y + y * unit), (ref_x + (x+1)*unit), (ref_y + (y+1)*unit));
 		return;
 	}
+
+	method void draw_dest(int x, int y) {
+		do Screen.setColor(false);
+		do Output.drawRectangle((ref_x + x * unit), (ref_y + y * unit), (ref_x + (x+1)*unit), (ref_y + (y+1)*unit));
+		return;
+	}
 }
