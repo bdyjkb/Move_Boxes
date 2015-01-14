@@ -6,9 +6,7 @@ class Player {
     field int ref_x, ref_y;
 
     constructor Player new(int ref_x, int ref_y){
-        let unit = //constant;
-        let img = String.new(//length);
-
+        let unit = 10;
         return this;
     }
 
@@ -21,19 +19,22 @@ class Player {
     method void draw(){
         var int i;
         do Screen.setColor(true);
+		do Screen.drawRectangle((ref_x + x * unit), (ref_y + y * unit), (ref_x + (x+1)*unit), (ref_y + (y+1)*unit));
         return;
     }
 
     method void wipe(){
         var int i;
         do Screen.setColor(false);
+		do Screen.drawRectangle((ref_x + x * unit), (ref_y + y * unit), (ref_x + (x+1)*unit), (ref_y + (y+1)*unit));
         return;
     }
 
     method void move(int next_x, int next_y){
-        while(){
-            do wipe();
-            do draw();
-        }
+        do wipe();
+		let x = next_x;
+		let y = next_y;
+        do draw();
+		return;
     }
 }
