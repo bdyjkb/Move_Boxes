@@ -4,7 +4,7 @@ class Box {
     field String img;
     field int ref_x, ref_y;
     field int x, y;
-    constructor Player new(int x, int y){
+    constructor Box new(int x, int y){
         let unit = 10;
         let ref_x = x;
         let ref_y = y;
