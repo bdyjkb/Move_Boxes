@@ -1,0 +1,39 @@
+class Player {
+    
+    field int unit;
+    field int x, y;
+    field String img;
+    field int ref_x, ref_y;
+
+    constructor Player new(int ref_x, int ref_y){
+        let unit = //constant;
+        let img = String.new(//length);
+
+        return this;
+    }
+
+    method void set_pos(int pos_x, int pos_y){
+        let x = pos_x;
+        let y = pos_y;
+        return;
+    }
+    
+    method void draw(){
+        var int i;
+        do Screen.setColor(true);
+        return;
+    }
+
+    method void wipe(){
+        var int i;
+        do Screen.setColor(false);
+        return;
+    }
+
+    method void move(int next_x, int next_y){
+        while(){
+            do wipe();
+            do draw();
+        }
+    }
+}

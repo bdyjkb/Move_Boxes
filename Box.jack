@@ -1,0 +1,37 @@
+class Box {
+    
+    field int unit;
+    field int ref_x, ref_y;
+
+    constructor Box new(int x, int y){
+        let unit = //constant;
+        let ref_x = x;
+        let ref_y = y;
+        return this;
+    }
+
+    method void set_pos(int pos_x, int pos_y){
+        let x = pos_x;
+        let y = pos_y;
+        return;
+    }
+    
+    method void draw(){
+        var int i;
+        do Screen.setColor(true);
+        return;
+    }
+
+    method void wipe(){
+        var int i;
+        do Screen.setColor(false);
+        return;
+    }
+
+    method void move(int next_x, int next_y){
+        while(){
+            do wipe();
+            do draw();
+        }
+    }
+}
