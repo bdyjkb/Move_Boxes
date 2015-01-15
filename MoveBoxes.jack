@@ -138,6 +138,7 @@ class MoveBoxes {
 					do map.setCharAt(next_y * row_length + next_x, 2 + 48);
 				}
 				if(map.charAt(next_y * row_length + next_x) - 48 = 3) {
+					do wall.wipe_dest(next_x, next_y);
 					do box.move(now_x, now_y, next_x, next_y);
 					do player.move(now_x, now_y);
 					do player.set_pos(now_x, now_y);
@@ -154,6 +155,7 @@ class MoveBoxes {
 				}
 			}
 			if(type = 3) {
+				do wall.wipe_dest(now_x, now_y);
 				do player.move(now_x, now_y);
 				do player.set_pos(now_x, now_y);
 				do step.add();

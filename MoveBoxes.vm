@@ -400,6 +400,11 @@ eq
 if-goto IF_TRUE10
 goto IF_FALSE10
 label IF_TRUE10
+push this 4
+push local 6
+push local 7
+call Wall.wipe_dest 3
+pop temp 0
 push this 5
 push local 4
 push local 5
@@ -467,6 +472,11 @@ eq
 if-goto IF_TRUE11
 goto IF_FALSE11
 label IF_TRUE11
+push this 4
+push local 4
+push local 5
+call Wall.wipe_dest 3
+pop temp 0
 push this 3
 push local 4
 push local 5
