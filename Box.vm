@@ -10,72 +10,314 @@ push argument 1
 pop this 3
 push pointer 0
 return
-function Box.draw 1
+function Box.draw 0
 push argument 0
 pop pointer 0
+push this 2
+push argument 1
+push this 0
+call Math.multiply 2
+add
+pop argument 1
+push this 3
+push argument 2
+push this 0
+call Math.multiply 2
+add
+pop argument 2
 push constant 0
 not
 call Screen.setColor 1
 pop temp 0
-push this 2
 push argument 1
-push this 0
-call Math.multiply 2
+push constant 6
 add
-push this 3
-push argument 2
-push this 0
-call Math.multiply 2
-add
-push this 2
-push argument 1
-push constant 1
-add
-push this 0
-call Math.multiply 2
-add
-push this 3
 push argument 2
 push constant 1
 add
-push this 0
-call Math.multiply 2
+push argument 1
+push constant 18
 add
-call Screen.drawRectangle 4
+push argument 2
+push constant 1
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 6
+add
+push argument 2
+push constant 1
+add
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 7
+add
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 1
+add
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 7
+add
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 18
+add
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 18
+add
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 1
+add
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 14
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 18
+add
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 14
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 6
+add
+push argument 2
+push constant 12
+add
+push constant 2
+call Screen.drawCircle 3
 pop temp 0
 push constant 0
 return
-function Box.wipe 1
+function Box.wipe 0
 push argument 0
 pop pointer 0
+push this 2
+push argument 1
+push this 0
+call Math.multiply 2
+add
+pop argument 1
+push this 3
+push argument 2
+push this 0
+call Math.multiply 2
+add
+pop argument 2
 push constant 0
 call Screen.setColor 1
 pop temp 0
-push this 2
 push argument 1
-push this 0
-call Math.multiply 2
+push constant 6
 add
-push this 3
-push argument 2
-push this 0
-call Math.multiply 2
-add
-push this 2
-push argument 1
-push constant 1
-add
-push this 0
-call Math.multiply 2
-add
-push this 3
 push argument 2
 push constant 1
 add
-push this 0
-call Math.multiply 2
+push argument 1
+push constant 18
 add
-call Screen.drawRectangle 4
+push argument 2
+push constant 1
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 6
+add
+push argument 2
+push constant 1
+add
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 7
+add
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 1
+add
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 7
+add
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 18
+add
+push argument 1
+push constant 1
+add
+push argument 2
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 18
+add
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 1
+add
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 14
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 13
+add
+push argument 2
+push constant 18
+add
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 14
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 6
+add
+push argument 2
+push constant 12
+add
+push constant 2
+call Screen.drawCircle 3
 pop temp 0
 push constant 0
 return

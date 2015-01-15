@@ -12,16 +12,36 @@ class Box {
     }
     
     method void draw(int x, int y){
-        var int i;
+		let x = ref_x + (x * unit);
+		let y = ref_y + (y * unit);
         do Screen.setColor(true);
-		do Screen.drawRectangle((ref_x + (x * unit)), (ref_y + (y * unit)), (ref_x + ((x+1)*unit)), (ref_y + ((y+1)*unit)));
-        return;
+        do Screen.drawLine(x+6, y+1, x+18, y+1);
+        do Screen.drawLine(x+6, y+1, x+1, y+7);
+        do Screen.drawLine(x+1, y+7, x+13, y+7);
+        do Screen.drawLine(x+18, y+1, x+13, y+7);
+        do Screen.drawLine(x+1, y+7, x+1, y+18);
+        do Screen.drawLine(x+13, y+18, x+1, y+18);
+        do Screen.drawLine(x+13, y+18, x+13, y+7);
+        do Screen.drawLine(x+18, y+1, x+18, y+14);
+        do Screen.drawLine(x+13, y+18, x+18, y+14);
+        do Screen.drawCircle(x+6, y+12, 2);
+		return;
     }
 
     method void wipe(int x, int y){
-        var int i;
+		let x = ref_x + (x * unit);
+		let y = ref_y + (y * unit);
         do Screen.setColor(false);
-		do Screen.drawRectangle((ref_x + (x * unit)), (ref_y + (y * unit)), (ref_x + ((x+1)*unit)), (ref_y + ((y+1)*unit)));
+        do Screen.drawLine(x+6, y+1, x+18, y+1);
+        do Screen.drawLine(x+6, y+1, x+1, y+7);
+        do Screen.drawLine(x+1, y+7, x+13, y+7);
+        do Screen.drawLine(x+18, y+1, x+13, y+7);
+        do Screen.drawLine(x+1, y+7, x+1, y+18);
+        do Screen.drawLine(x+13, y+18, x+1, y+18);
+        do Screen.drawLine(x+13, y+18, x+13, y+7);
+        do Screen.drawLine(x+18, y+1, x+18, y+14);
+        do Screen.drawLine(x+13, y+18, x+18, y+14);
+        do Screen.drawCircle(x+6, y+12, 2);
         return;
     }
 

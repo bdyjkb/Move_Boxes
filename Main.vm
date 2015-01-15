@@ -218,7 +218,7 @@ push constant 52
 call String.appendChar 2
 push constant 20
 push constant 20
-push constant 15
+push constant 20
 call MoveBoxes.new 6
 pop local 0
 push local 0
