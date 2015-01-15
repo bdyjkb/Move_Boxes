@@ -156,7 +156,7 @@ add
 call Screen.drawLine 4
 pop temp 0
 push argument 1
-push constant 6
+push constant 7
 add
 push argument 2
 push constant 12
@@ -311,7 +311,7 @@ add
 call Screen.drawLine 4
 pop temp 0
 push argument 1
-push constant 6
+push constant 7
 add
 push argument 2
 push constant 12

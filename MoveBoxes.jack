@@ -181,7 +181,7 @@ class MoveBoxes {
 		do Output.moveCursor(0, 0);
 		let c = Keyboard.readChar();
 		do Screen.setColor(false);
-		do Screen.drawRectangle(0, 0, 14, 14);
+		do Screen.drawRectangle(0, 0, 20, 20);
 		return c;
 	}
 }
