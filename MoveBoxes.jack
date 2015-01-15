@@ -4,6 +4,7 @@ class MoveBoxes {
 	field Player player;
 	field Wall wall;
 	field Box box;
+	field Step step;
 	field int box_cnt;
 
 	constructor MoveBoxes new(int row_l, int column_l, String s, int ref_x, int ref_y, int unit) {
@@ -14,6 +15,8 @@ class MoveBoxes {
 		let player = Player.new(ref_x, ref_y, unit);
 		let wall = Wall.new(ref_x, ref_y, unit);
 		let box = Box.new(ref_x, ref_y, unit);
+
+		let step = Step.new(0);
 
 		let box_cnt = 0;
 
@@ -113,6 +116,7 @@ class MoveBoxes {
 			if(type = 0) {
 				do player.move(now_x, now_y);
 				do player.set_pos(now_x, now_y);
+				do step.add();
 
 				if(map.charAt(pos_y * row_length + pos_x) - 48 = 3) {
 					do wall.draw_dest(pos_x, pos_y);
@@ -127,6 +131,7 @@ class MoveBoxes {
 					do box.move(now_x, now_y, next_x, next_y);
 					do player.move(now_x, now_y);
 					do player.set_pos(now_x, now_y);
+					do step.add();
 					
 					do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
 					do map.setCharAt(now_y * row_length + now_x, 1 + 48);
@@ -136,6 +141,7 @@ class MoveBoxes {
 					do box.move(now_x, now_y, next_x, next_y);
 					do player.move(now_x, now_y);
 					do player.set_pos(now_x, now_y);
+					do step.add();
 
 					do Sys.wait(500);
 					do box.wipe(next_x, next_y);
@@ -150,6 +156,7 @@ class MoveBoxes {
 			if(type = 3) {
 				do player.move(now_x, now_y);
 				do player.set_pos(now_x, now_y);
+				do step.add();
 
 				do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
 			}
