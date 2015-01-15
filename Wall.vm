@@ -13,42 +13,60 @@ return
 function Wall.draw 0
 push argument 0
 pop pointer 0
+push this 0
+push argument 1
+push this 2
+call Math.multiply 2
+add
+pop argument 1
+push this 1
+push argument 2
+push this 2
+call Math.multiply 2
+add
+pop argument 2
 push constant 0
 not
 call Screen.setColor 1
 pop temp 0
-push this 0
-push argument 1
-push this 2
-call Math.multiply 2
-add
-push constant 2
-add
-push this 1
-push argument 2
-push this 2
-call Math.multiply 2
-add
-push constant 2
-add
-push this 0
 push argument 1
 push constant 1
 add
-push this 2
-call Math.multiply 2
-add
-push constant 2
-sub
-push this 1
 push argument 2
 push constant 1
 add
-push this 2
-call Math.multiply 2
+push argument 1
+push constant 18
 add
-push constant 2
-sub
+push argument 2
+push constant 8
+add
+call Screen.drawRectangle 4
+pop temp 0
+push argument 1
+push argument 2
+push constant 11
+add
+push argument 1
+push constant 8
+add
+push argument 2
+push constant 18
+add
+call Screen.drawRectangle 4
+pop temp 0
+push argument 1
+push constant 11
+add
+push argument 2
+push constant 11
+add
+push argument 1
+push constant 19
+add
+push argument 2
+push constant 18
+add
 call Screen.drawRectangle 4
 pop temp 0
 push constant 0
@@ -56,34 +74,21 @@ return
 function Wall.draw_dest 0
 push argument 0
 pop pointer 0
+push this 0
+push argument 1
+push this 2
+call Math.multiply 2
+add
+pop argument 1
+push this 1
+push argument 2
+push this 2
+call Math.multiply 2
+add
+pop argument 2
 push constant 0
+not
 call Screen.setColor 1
-pop temp 0
-push this 0
-push argument 1
-push this 2
-call Math.multiply 2
-add
-push this 1
-push argument 2
-push this 2
-call Math.multiply 2
-add
-push this 0
-push argument 1
-push constant 1
-add
-push this 2
-call Math.multiply 2
-add
-push this 1
-push argument 2
-push constant 1
-add
-push this 2
-call Math.multiply 2
-add
-call Screen.drawRectangle 4
 pop temp 0
 push constant 0
 return
