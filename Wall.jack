@@ -12,7 +12,7 @@ class Wall {
 
 	method void draw(int x, int y){
 		do Screen.setColor(true);
-		do Screen.drawRectangle((ref_x + (x * unit)), (ref_y + (y * unit)), (ref_x + ((x+1)*unit)), (ref_y + ((y+1)*unit)));
+		do Screen.drawRectangle((ref_x + (x * unit) + 2), (ref_y + (y * unit) + 2), (ref_x + ((x+1)*unit) - 2), (ref_y + ((y+1)*unit)) - 2);
 		return;
 	}
 
