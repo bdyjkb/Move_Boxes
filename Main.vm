@@ -82,6 +82,10 @@ pop temp 0
 push constant 1000
 call Sys.wait 1
 pop temp 0
+push constant 180
+push constant 120
+call Loading.run 2
+pop temp 0
 push local 1
 call Menu.run 1
 pop local 2

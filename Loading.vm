@@ -1,0 +1,402 @@
+function Loading.run 1
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+call Text.draw_L 2
+pop temp 0
+push argument 0
+push constant 12
+add
+push argument 1
+call Text.draw_o 2
+pop temp 0
+push argument 0
+push constant 21
+add
+push argument 1
+call Text.draw_a 2
+pop temp 0
+push argument 0
+push constant 32
+add
+push argument 1
+call Text.draw_d 2
+pop temp 0
+push argument 0
+push constant 43
+add
+push argument 1
+call Text.draw_n 2
+pop temp 0
+push argument 0
+push constant 55
+add
+push argument 1
+call Text.draw_i 2
+pop temp 0
+push argument 0
+push constant 59
+add
+push argument 1
+call Text.draw_n 2
+pop temp 0
+push argument 0
+push constant 71
+add
+push argument 1
+call Text.draw_g 2
+pop temp 0
+push argument 0
+push constant 82
+add
+push argument 1
+call Text.draw_dot 2
+pop temp 0
+push argument 0
+push constant 88
+add
+push argument 1
+call Text.draw_dot 2
+pop temp 0
+push argument 0
+push constant 94
+add
+push argument 1
+call Text.draw_dot 2
+pop temp 0
+push constant 2000
+call Sys.wait 1
+pop temp 0
+push constant 1000
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 1000
+lt
+not
+if-goto WHILE_END0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 9
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 9
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 15
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 15
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 18
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 18
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 15
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 15
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 9
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 9
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 9
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 9
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 15
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 15
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 18
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 18
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 15
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 15
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 9
+add
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+push constant 9
+add
+call Text.draw_L 2
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push argument 1
+call Text.draw_L 2
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push argument 0
+push constant 12
+add
+push argument 1
+call Text.draw_o 2
+pop temp 0
+push argument 0
+push constant 21
+add
+push argument 1
+call Text.draw_a 2
+pop temp 0
+push argument 0
+push constant 32
+add
+push argument 1
+call Text.draw_d 2
+pop temp 0
+push argument 0
+push constant 43
+add
+push argument 1
+call Text.draw_n 2
+pop temp 0
+push argument 0
+push constant 55
+add
+push argument 1
+call Text.draw_i 2
+pop temp 0
+push argument 0
+push constant 59
+add
+push argument 1
+call Text.draw_n 2
+pop temp 0
+push argument 0
+push constant 71
+add
+push argument 1
+call Text.draw_g 2
+pop temp 0
+push argument 0
+push constant 82
+add
+push argument 1
+call Text.draw_dot 2
+pop temp 0
+push argument 0
+push constant 88
+add
+push argument 1
+call Text.draw_dot 2
+pop temp 0
+push argument 0
+push constant 94
+add
+push argument 1
+call Text.draw_dot 2
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return

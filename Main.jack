@@ -10,6 +10,8 @@ class Main {
 
 		do Sys.wait(1000);
 
+		do Loading.run(180, 120);
+
 		let level = menu.run();
 
 		if(level = 0){	

@@ -7,14 +7,16 @@ class Menu {
 
 		do Screen.clearScreen();
 
+		do Title.print(150, 50);
+
 		do Output.moveCursor(20, 25);
 		do Output.printString("press Q to exit");
 		do Output.moveCursor(22, 36);
 		do Output.printString("Copyright Group C.C.L. 2015");
 		
 		let selection = 0;
-		do draw_str_tutorial(225, 148, true);
-		do draw_str_game(240, 180, true);
+		do draw_str_tutorial(215, 148, true);
+		do draw_str_game(230, 180, true);
 		do draw_selection(selection);
 		let key = keyPressed();
 		while(~(key = 81)){
@@ -43,27 +45,27 @@ class Menu {
 	method void draw_selection(int s) {
 		if(s = 0) {
 			do Screen.setColor(true);
-			do Screen.drawLine(220, 145, 300, 145);
-			do Screen.drawLine(220, 145, 220, 170);
-			do Screen.drawLine(220, 170, 300, 170);
-			do Screen.drawLine(300, 145, 300, 170);
+			do Screen.drawLine(210, 145, 290, 145);
+			do Screen.drawLine(210, 145, 210, 170);
+			do Screen.drawLine(210, 170, 290, 170);
+			do Screen.drawLine(290, 145, 290, 170);
 			do Screen.setColor(false);
-			do Screen.drawLine(235, 180, 235, 205);
-			do Screen.drawLine(235, 205, 285, 205);
-			do Screen.drawLine(285, 205, 285, 180);
-			do Screen.drawLine(285, 180, 235, 180);
+			do Screen.drawLine(225, 180, 225, 205);
+			do Screen.drawLine(225, 205, 275, 205);
+			do Screen.drawLine(275, 205, 275, 180);
+			do Screen.drawLine(275, 180, 225, 180);
 		}
 		else { // s == 1
 			do Screen.setColor(false);
-			do Screen.drawLine(220, 145, 300, 145);
-			do Screen.drawLine(220, 145, 220, 170);
-			do Screen.drawLine(220, 170, 300, 170);
-			do Screen.drawLine(300, 145, 300, 170);
+			do Screen.drawLine(210, 145, 290, 145);
+			do Screen.drawLine(210, 145, 210, 170);
+			do Screen.drawLine(210, 170, 290, 170);
+			do Screen.drawLine(290, 145, 290, 170);
 			do Screen.setColor(true);
-			do Screen.drawLine(235, 180, 235, 205);
-			do Screen.drawLine(235, 205, 285, 205);
-			do Screen.drawLine(285, 205, 285, 180);
-			do Screen.drawLine(285, 180, 235, 180);
+			do Screen.drawLine(225, 180, 225, 205);
+			do Screen.drawLine(225, 205, 275, 205);
+			do Screen.drawLine(275, 205, 275, 180);
+			do Screen.drawLine(275, 180, 225, 180);
 		}
 		return;
 	}
