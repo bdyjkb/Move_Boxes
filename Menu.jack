@@ -7,13 +7,9 @@ class Menu {
 
 		do Screen.clearScreen();
 
-		let x = 100;
-		let y = 100;
-		do draw_title(x, y);
-
 		do Output.moveCursor(20, 25);
 		do Output.printString("press Q to exit");
-		do Output.moveCursor(22, 19);
+		do Output.moveCursor(22, 36);
 		do Output.printString("Copyright Group C.C.L. 2015");
 		
 		let selection = 0;
@@ -30,7 +26,7 @@ class Menu {
 				let selection = (selection * -1) + 1;
 				do draw_selection(selection);
 			}
-			if(key = 132){ //right
+			if(key = 128){ //right
 				return selection;
 			}
 			let key = keyPressed();
@@ -83,142 +79,23 @@ class Menu {
 
 	method void draw_str_tutorial(int x, int y, boolean color) {
 		do Screen.setColor(color);
-		do draw_ch_t(x,y);
-		do draw_ch_u(x+11, y);
-		do draw_ch_t(x+21, y);
-		do draw_ch_o(x+32, y);
-		do draw_ch_r(x+41, y);
-		do draw_ch_i(x+50, y);
-		do draw_ch_a(x+54, y);
-		do draw_ch_l(x+65, y);
+		do Text.draw_t(x,y);
+		do Text.draw_u(x+11, y);
+		do Text.draw_t(x+21, y);
+		do Text.draw_o(x+32, y);
+		do Text.draw_r(x+41, y);
+		do Text.draw_i(x+50, y);
+		do Text.draw_a(x+54, y);
+		do Text.draw_l(x+65, y);
 		return;
 	}
 	
 	method void draw_str_game(int x, int y, boolean color) {
 		do Screen.setColor(color);
-		do draw_ch_g(x, y);
-		do draw_ch_a(x+10, y);
-		do draw_ch_m(x+21, y);
-		do draw_ch_e(x+35, y);
+		do Text.draw_g(x, y);
+		do Text.draw_a(x+10, y);
+		do Text.draw_m(x+21, y);
+		do Text.draw_e(x+35, y);
 		return;
 	}
-	method void draw_ch_t(int x, int y) {
-		do Screen.drawRectangle(x, y+5, x+8, y+6);
-		do Screen.drawRectangle(x+3, y+2, x+4, y+16);
-		do Screen.drawRectangle(x+4, y+16, x+7, y+17);
-		do Screen.drawRectangle(x+7, y+14, x+8, y+16);
-		return;
-	}
-
-	method void draw_ch_u(int x, int y) {
-		do Screen.drawRectangle(x, y+5, x+1, y+15);
-		do Screen.drawRectangle(x+2, y+16, x+4, y+17);
-		do Screen.drawRectangle(x+6, y+5, x+7, y+17);
-		do Screen.drawPixel(x+2, y+15);
-		do Screen.drawPixel(x+1, y+16);
-		do Screen.drawLine(x+5, y+14, x+5, y+16);
-		return;
-	}
-
-	method void draw_ch_o(int x, int y) {
-		do Screen.drawRectangle(x, y+7, x+1, y+15);
-		do Screen.drawRectangle(x+2, y+5, x+4, y+6);
-		do Screen.drawRectangle(x+5, y+7, x+6, y+15);
-		do Screen.drawRectangle(x+2, y+16, x+4, y+17);
-		do Screen.drawPixel(x+1, y+6);
-		do Screen.drawPixel(x+1, y+16);
-		do Screen.drawPixel(x+5, y+6);
-		do Screen.drawPixel(x+5, y+16);
-		return;
-	}
-
-	method void draw_ch_r(int x, int y) {
-		do Screen.drawRectangle(x, y+5, x+1, y+17);
-		do Screen.drawLine(x+2, y+8, x+2, y+11);
-		do Screen.drawLine(x+3, y+7, x+3, y+9);
-		do Screen.drawLine(x+4, y+6, x+4, y+8);
-		do Screen.drawLine(x+5, y+5, x+5, y+7);
-		do Screen.drawLine(x+6, y+5, x+6, y+6);
-		return;
-	}
-
-	method void draw_ch_i(int x, int y) {
-		do Screen.drawRectangle(x, y+5, x+1, y+6);
-		do Screen.drawRectangle(x, y+8, x+1, y+17);
-		return;
-	}
-
-	method void draw_ch_a(int x, int y) {
-		do Screen.drawRectangle(x, y+7, x+1, y+15);
-		do Screen.drawRectangle(x+2, y+5, x+4, y+6);
-		do Screen.drawRectangle(x+6, y+5, x+7, y+15);
-		do Screen.drawRectangle(x+2, y+16, x+4, y+17);
-		do Screen.drawPixel(x+1, y+6);
-		do Screen.drawPixel(x+1, y+16);
-		do Screen.drawPixel(x+5, y+6);
-		do Screen.drawPixel(x+5, y+7);
-		do Screen.drawPixel(x+5, y+15);
-		do Screen.drawPixel(x+5, y+16);
-		do Screen.drawPixel(x+7, y+16);
-		do Screen.drawPixel(x+8, y+16);
-		do Screen.drawPixel(x+8, y+17);
-		return;
-	}
-
-	method void draw_ch_l(int x, int y) {
-		do Screen.drawRectangle(x, y, x+1, y+17);
-		return;
-	}
-
-	method void draw_ch_g(int x, int y) {
-		do Screen.drawRectangle(x, y+7, x+1, y+14);
-		do Screen.drawRectangle(x+2, y+5, x+4, y+6);
-		do Screen.drawRectangle(x+6, y+5, x+7, y+19);
-		do Screen.drawRectangle(x+2, y+21, x+5, y+22);
-		do Screen.drawRectangle(x+5, y+20, x+6, y+21);
-		do Screen.drawPixel(x+1, y+6);
-		do Screen.drawPixel(x+5, y+6);
-		do Screen.drawPixel(x+5, y+7);
-		do Screen.drawPixel(x+1, y+15);
-		do Screen.drawPixel(x+2, y+15);
-		do Screen.drawPixel(x+2, y+16);
-		do Screen.drawPixel(x+3, y+16);
-		do Screen.drawPixel(x+4, y+16);
-		do Screen.drawPixel(x+4, y+15);
-		do Screen.drawPixel(x+5, y+15);
-		do Screen.drawPixel(x, y+20);
-		do Screen.drawPixel(x+1, y+20);
-		do Screen.drawPixel(x+1, y+21);
-		return;
-	}
-
-	method void draw_ch_m(int x, int y) {
-		do Screen.drawRectangle(x, y+5, x+1, y+17);
-		do Screen.drawRectangle(x+3, y+5, x+4, y+6);
-		do Screen.drawRectangle(x+5, y+7, x+6, y+17);
-		do Screen.drawRectangle(x+8, y+5, x+9, y+6);
-		do Screen.drawRectangle(x+10, y+7, x+11, y+17);
-		do Screen.drawPixel(x+2, y+6);
-		do Screen.drawPixel(x+2, y+7);
-		do Screen.drawPixel(x+5, y+6);
-		do Screen.drawPixel(x+7, y+6);
-		do Screen.drawPixel(x+7, y+7);
-		do Screen.drawPixel(x+10, y+6);
-		return;
-	}
-
-	method void draw_ch_e(int x, int y) {
-		do Screen.drawRectangle(x, y+7, x+1, y+14);
-		do Screen.drawRectangle(x+2, y+5, x+6, y+6);
-		do Screen.drawRectangle(x+6, y+6, x+7, y+7);
-		do Screen.drawRectangle(x+7, y+7, x+8, y+11);
-		do Screen.drawRectangle(x+2, y+10, x+6, y+11);
-		do Screen.drawRectangle(x+1, y+14, x+2, y+16);
-		do Screen.drawRectangle(x+2, y+16, x+6, y+17);
-		do Screen.drawRectangle(x+7, y+14, x+8, y+15);
-		do Screen.drawPixel(x+1, y+6);
-		do Screen.drawPixel(x+7, y+16);
-		return;
-	}
-
 }

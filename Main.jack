@@ -19,7 +19,8 @@ class Main {
 			let game = MoveBoxes.new(10, 7, "0444444400040000044444244400044001200204400040204444304000400444444440", 20, 20, 20);
 		}
 		if(level = 2){
-			do Sys.halt();
+			do Screen.clearScreen();
+			do Sys.wait(500);
 			return;
 		}
 
@@ -27,7 +28,7 @@ class Main {
 		do game.run();
 		
 		do Screen.clearScreen();
-		do Output.moveCursor(0,0);
+		do Output.moveCursor(15,12);
 		do Output.printString("Horay! Congratulation! You win the game!");
 		return;
 	}

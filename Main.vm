@@ -313,7 +313,10 @@ eq
 if-goto IF_TRUE2
 goto IF_FALSE2
 label IF_TRUE2
-call Sys.halt 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 500
+call Sys.wait 1
 pop temp 0
 push constant 0
 return
@@ -326,8 +329,8 @@ call MoveBoxes.run 1
 pop temp 0
 call Screen.clearScreen 0
 pop temp 0
-push constant 0
-push constant 0
+push constant 15
+push constant 12
 call Output.moveCursor 2
 pop temp 0
 push constant 40
