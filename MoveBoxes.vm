@@ -24,9 +24,6 @@ push argument 5
 call Box.new 3
 pop this 5
 push constant 0
-call Step.new 1
-pop this 6
-push constant 0
 pop this 7
 call Screen.clearScreen 0
 pop temp 0
@@ -122,6 +119,10 @@ add
 pop local 0
 goto WHILE_EXP0
 label WHILE_END0
+push constant 0
+push this 7
+call State.new 2
+pop this 6
 push constant 0
 return
 function MoveBoxes.run 9
@@ -267,7 +268,7 @@ push local 5
 call Player.set_pos 3
 pop temp 0
 push this 6
-call Step.add 1
+call State.add_step 1
 pop temp 0
 push this 0
 push local 3
@@ -352,7 +353,7 @@ push local 5
 call Player.set_pos 3
 pop temp 0
 push this 6
-call Step.add 1
+call State.add_step 1
 pop temp 0
 push this 0
 push local 3
@@ -425,7 +426,7 @@ push local 5
 call Player.set_pos 3
 pop temp 0
 push this 6
-call Step.add 1
+call State.add_step 1
 pop temp 0
 push constant 500
 call Sys.wait 1
@@ -439,6 +440,9 @@ push this 4
 push local 6
 push local 7
 call Wall.draw_dest 3
+pop temp 0
+push this 6
+call State.box_dest 1
 pop temp 0
 push this 0
 push local 3
@@ -490,7 +494,7 @@ push local 5
 call Player.set_pos 3
 pop temp 0
 push this 6
-call Step.add 1
+call State.add_step 1
 pop temp 0
 push this 0
 push local 3
