@@ -4,34 +4,81 @@ class Main {
 		var MoveBoxes game;
 		var Menu menu;
 		var int level;
+		var int pass;
 
 		do Output.printString("Are you ready? Game will start later.");
 		do Output.println();
 
 		do Sys.wait(1000);
 
-		do Loading.run(180, 120);
+		do Loading.run(205, 120);
 
 		let level = menu.run();
 
-		if(level = 0){	
-			let game = MoveBoxes.new(5, 5, "4444440034402044100444444", 20, 20, 20);
-		}
-		if(level = 1){
-			let game = MoveBoxes.new(10, 7, "0444444400040000044444244400044001200204400040204444304000400444444440", 20, 20, 20);
-		}
-		if(level = 2){
-			do Screen.clearScreen();
-			do Sys.wait(500);
-			return;
+		while(~(level = 2))	{
+			let pass = 0;
+
+			if(level = 0){
+				let game = MoveBoxes.new(5, 5, "4444440034402044100444444", 20, 20, 20);
+				do game.init();
+				let pass = game.run();
+			}
+
+			if(level = 1){
+				//level 1
+				let game = MoveBoxes.new(10, 7, "0444444400040000044444244400044001200204400040204444304000400444444440", 20, 20, 20);
+				do game.init();
+				let pass = pass + game.run();
+
+				if(pass = 1){
+					//level 2
+					let game = MoveBoxes.new(6, 8, "044440440040412040442044440204402004430204444444", 20, 20, 20);
+					do game.init();
+					let pass = pass + game.run();
+					
+					if(pass = 2){
+						//level 3
+						//let game = MoveBoxes.new();
+						//do game.init();
+						//let pass = pass + game.run();
+						let pass = 3;
+					}
+				}
+			}
+			
+			if(pass = 3){
+				let level = 2;
+			}
+			else{
+				if(pass = 0){
+					let level = 2;
+				}
+				else{
+					let level = menu.run();
+				}
+			}
 		}
 
-		do game.init();
-		do game.run();
-		
 		do Screen.clearScreen();
-		do Output.moveCursor(15,12);
-		do Output.printString("Horay! Congratulation! You win the game!");
+
+		if(pass = 3){
+			do Output.moveCursor(12, 20);
+			do Output.printString("Congratulation! you win the game.");
+		}
+		if(pass = 2){
+			do Output.moveCursor(12, 28);
+			do Output.printString("Bye Bye");
+		}
+		if(pass = 1){
+			do Output.moveCursor(12, 28);
+			do Output.printString("Bye Bye");
+		}
+		if(pass = 0){
+			do Output.moveCursor(11,27);
+			do Output.printString("Game Over");
+			do Output.moveCursor(13, 28);
+			do Output.printString("Bye Bye");
+		}
 		return;
 	}
 }

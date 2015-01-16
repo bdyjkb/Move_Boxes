@@ -57,7 +57,7 @@ class MoveBoxes {
 		return ;
 	}
 
-	method void run() {
+	method int run() {
 		var char key;
 		var boolean exit;
 		var int pos_x, pos_y;
@@ -169,7 +169,7 @@ class MoveBoxes {
 
 			if(box_cnt = 0) {
 				do Screen.clearScreen();
-				return ;
+				return 1;
 			}
 
 			let key = getKeyPressed();
@@ -178,7 +178,7 @@ class MoveBoxes {
 			}
 		}
 
-		return ;
+		return 0;
 	}
 
 	method char getKeyPressed(){

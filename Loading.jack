@@ -11,13 +11,12 @@ class Loading {
 		do Text.draw_o(x+12, y);
 		do Text.draw_a(x+21, y);
 		do Text.draw_d(x+32, y);
-		do Text.draw_n(x+43, y);
-		do Text.draw_i(x+55, y);
-		do Text.draw_n(x+59, y);
-		do Text.draw_g(x+71, y);
+		do Text.draw_i(x+43, y);
+		do Text.draw_n(x+47, y);
+		do Text.draw_g(x+59, y);
+		do Text.draw_dot(x+70, y);
+		do Text.draw_dot(x+76, y);
 		do Text.draw_dot(x+82, y);
-		do Text.draw_dot(x+88, y);
-		do Text.draw_dot(x+94, y);
 		
 		do Sys.wait(2000);
 

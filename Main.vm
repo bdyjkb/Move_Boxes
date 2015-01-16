@@ -1,4 +1,4 @@
-function Main.main 3
+function Main.main 4
 push constant 37
 call String.new 1
 push constant 65
@@ -82,13 +82,22 @@ pop temp 0
 push constant 1000
 call Sys.wait 1
 pop temp 0
-push constant 180
+push constant 205
 push constant 120
 call Loading.run 2
 pop temp 0
 push local 1
 call Menu.run 1
 pop local 2
+label WHILE_EXP0
+push local 2
+push constant 2
+eq
+not
+not
+if-goto WHILE_END0
+push constant 0
+pop local 3
 push local 2
 push constant 0
 eq
@@ -154,6 +163,12 @@ push constant 20
 push constant 20
 call MoveBoxes.new 6
 pop local 0
+push local 0
+call MoveBoxes.init 1
+pop temp 0
+push local 0
+call MoveBoxes.run 1
+pop local 3
 label IF_FALSE0
 push local 2
 push constant 1
@@ -310,49 +325,185 @@ push constant 20
 push constant 20
 call MoveBoxes.new 6
 pop local 0
-label IF_FALSE1
-push local 2
-push constant 2
+push local 0
+call MoveBoxes.init 1
+pop temp 0
+push local 3
+push local 0
+call MoveBoxes.run 1
+add
+pop local 3
+push local 3
+push constant 1
 eq
 if-goto IF_TRUE2
 goto IF_FALSE2
 label IF_TRUE2
-call Screen.clearScreen 0
-pop temp 0
-push constant 500
-call Sys.wait 1
-pop temp 0
-push constant 0
-return
-label IF_FALSE2
+push constant 6
+push constant 8
+push constant 48
+call String.new 1
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 49
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 51
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 20
+push constant 20
+push constant 20
+call MoveBoxes.new 6
+pop local 0
 push local 0
 call MoveBoxes.init 1
 pop temp 0
+push local 3
 push local 0
 call MoveBoxes.run 1
-pop temp 0
+add
+pop local 3
+push local 3
+push constant 2
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push constant 3
+pop local 3
+label IF_FALSE3
+label IF_FALSE2
+label IF_FALSE1
+push local 3
+push constant 3
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push constant 2
+pop local 2
+goto IF_END4
+label IF_FALSE4
+push local 3
+push constant 0
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push constant 2
+pop local 2
+goto IF_END5
+label IF_FALSE5
+push local 1
+call Menu.run 1
+pop local 2
+label IF_END5
+label IF_END4
+goto WHILE_EXP0
+label WHILE_END0
 call Screen.clearScreen 0
 pop temp 0
-push constant 15
+push local 3
+push constant 3
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
 push constant 12
+push constant 20
 call Output.moveCursor 2
 pop temp 0
-push constant 40
-call String.new 1
-push constant 72
-call String.appendChar 2
-push constant 111
-call String.appendChar 2
-push constant 114
-call String.appendChar 2
-push constant 97
-call String.appendChar 2
-push constant 121
-call String.appendChar 2
 push constant 33
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
+call String.new 1
 push constant 67
 call String.appendChar 2
 push constant 111
@@ -385,7 +536,7 @@ push constant 33
 call String.appendChar 2
 push constant 32
 call String.appendChar 2
-push constant 89
+push constant 121
 call String.appendChar 2
 push constant 111
 call String.appendChar 2
@@ -417,9 +568,123 @@ push constant 109
 call String.appendChar 2
 push constant 101
 call String.appendChar 2
-push constant 33
+push constant 46
 call String.appendChar 2
 call Output.printString 1
 pop temp 0
+label IF_FALSE6
+push local 3
+push constant 2
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push constant 12
+push constant 28
+call Output.moveCursor 2
+pop temp 0
+push constant 7
+call String.new 1
+push constant 66
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 66
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label IF_FALSE7
+push local 3
+push constant 1
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push constant 12
+push constant 28
+call Output.moveCursor 2
+pop temp 0
+push constant 7
+call String.new 1
+push constant 66
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 66
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label IF_FALSE8
+push local 3
+push constant 0
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push constant 11
+push constant 27
+call Output.moveCursor 2
+pop temp 0
+push constant 9
+call String.new 1
+push constant 71
+call String.appendChar 2
+push constant 97
+call String.appendChar 2
+push constant 109
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 118
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 114
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 13
+push constant 28
+call Output.moveCursor 2
+pop temp 0
+push constant 7
+call String.new 1
+push constant 66
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 66
+call String.appendChar 2
+push constant 121
+call String.appendChar 2
+push constant 101
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label IF_FALSE9
 push constant 0
 return

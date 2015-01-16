@@ -515,7 +515,7 @@ goto IF_FALSE12
 label IF_TRUE12
 call Screen.clearScreen 0
 pop temp 0
-push constant 0
+push constant 1
 return
 label IF_FALSE12
 push pointer 0
