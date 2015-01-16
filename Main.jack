@@ -1,24 +1,30 @@
 class Main {
 	
 	function void main() {
-		var MoveBoxes tutorial;
+		var MoveBoxes game;
+		var Menu menu;
 		var int level;
 
 		do Output.printString("Are you ready? Game will start later.");
 		do Output.println();
-		let level =  Keyboard.readInt("Input the level you want to play(1 or 2):");
 
 		do Sys.wait(1000);
-		do Screen.clearScreen();
-		
+
+		let level = menu.run();
+
+		if(level = 0){	
+			let game = MoveBoxes.new(5, 5, "4444440034402044100444444", 20, 20, 20);
+		}
 		if(level = 1){
-			let tutorial = MoveBoxes.new(8, 8, "4444444444400034402000044000440440020004400002044100000444444444", 20, 20, 20);
+			let game = MoveBoxes.new(10, 7, "0444444400040000044444244400044001200204400040204444304000400444444440", 20, 20, 20);
 		}
-		else{
-			let tutorial = MoveBoxes.new(10, 7, "0444444400040000044444244400044001200204400040204444304000400444444440", 20, 20, 20);
+		if(level = 2){
+			do Sys.halt();
+			return;
 		}
-		do tutorial.init();
-		do tutorial.run();
+
+		do game.init();
+		do game.run();
 		
 		do Screen.clearScreen();
 		do Output.moveCursor(0,0);

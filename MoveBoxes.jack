@@ -20,6 +20,9 @@ class MoveBoxes {
 
 		let box_cnt = 0;
 
+		do Screen.clearScreen();
+		// edit by Yisheng, I want to let init() clear screen by itself.
+
 		return this;
 	}
 	

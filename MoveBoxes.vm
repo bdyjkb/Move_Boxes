@@ -28,6 +28,8 @@ call Step.new 1
 pop this 6
 push constant 0
 pop this 7
+call Screen.clearScreen 0
+pop temp 0
 push pointer 0
 return
 function MoveBoxes.init 4
