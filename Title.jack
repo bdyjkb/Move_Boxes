@@ -1,5 +1,6 @@
 class Title{
 function void print(int x, int y) {
+	do Screen.setColor(true);
 	do Screen.drawLine(x+33, y+6, x+36, y+6);
 	do Screen.drawLine(x+33, y+7, x+39, y+7);
 	do Screen.drawLine(x+96, y+7, x+99, y+7);

@@ -19,10 +19,10 @@ class State {
         do Screen.drawRectangle(5, 225, 506, 250);
      
         do Output.moveCursor(21, 2);
-        do Output.printString("Steps: ");
+        do Output.printString("Steps:");
         do Output.printInt(step);
 
-        do Output.printString("  Left: ");
+        do Output.printString(" Left:");
         do Output.printInt(cnt);
 
         return ;
@@ -40,6 +40,15 @@ class State {
         let cnt = cnt - 1;
 
         do print();
+
+        return ;
+    }
+
+    method void warn(String w) {
+        do print();
+
+        do Output.printString("  Warn:");
+        do Output.printString(w);
 
         return ;
     }
