@@ -22,19 +22,64 @@ class Player {
     method void draw(){
         var int i;
 		var int r, c;
-		var int div_r;
 		let r = ref_x + (x * unit);
 		let c = ref_y + (y * unit);
 		do Screen.setColor(true);
 
-		let i = 0;
-		while(i < (unit * unit)){
-			let div_r = i / unit;
-			if(img.charAt(i) = 49){
-				do Screen.drawPixel(r + (i - (unit * div_r)), c + div_r);
-			}
-			let i = i + 1;
-		}
+		do Screen.drawLine(r+5, c, r+14, c);
+		do Screen.drawLine(r+4, c+1, r+5, c+1);
+		do Screen.drawLine(r+14, c+1, r+15, c+1);
+		do Screen.drawLine(r+4, c+2, r+4, c+5);
+		do Screen.drawLine(r+15, c+2, r+15, c+5);
+		do Screen.drawPixel(r+3, c+5);
+		do Screen.drawPixel(r+3, c+5);
+		do Screen.drawPixel(r+16, c+5);
+		do Screen.drawLine(r+7, c+2, r+7, c+3);
+		do Screen.drawLine(r+12, c+2, r+12, c+3);
+		do Screen.drawLine(r+9, c+4, r+10, c+4);
+		do Screen.drawPixel(r+7, c+5);
+		do Screen.drawPixel(r+12, c+5);
+		do Screen.drawLine(r+8, c+6, r+11, c+6);
+		do Screen.drawPixel(r+5, c+6);
+		do Screen.drawPixel(r+14, c+6);
+		do Screen.drawPixel(r+6, c+7);
+		do Screen.drawPixel(r+14, c+7);
+		do Screen.drawLine(r+7, c+8, r+12, c+8);
+		//face
+
+		do Screen.drawLine(r+2, c+6, r+2, c+7);
+		do Screen.drawLine(r+17, c+6, r+17, c+7);
+		do Screen.drawLine(r+1, c+8, r+1, c+12);
+		do Screen.drawLine(r+18, c+8, r+18, c+12);
+		do Screen.drawLine(r+2, c+13, r+4, c+13);
+		do Screen.drawLine(r+15, c+13, r+17, c+13);
+		do Screen.drawPixel(r+4, c+10);
+		do Screen.drawPixel(r+15, c+10);
+		do Screen.drawLine(r+5, c+10, r+5, c+12);
+		do Screen.drawLine(r+14, c+10, r+14, c+12);
+		do Screen.drawLine(r+6, c+9, r+6, c+13);
+		do Screen.drawLine(r+13, c+9, r+13, c+13);
+		//arm
+
+		do Screen.drawPixel(r+5, c+14);
+		do Screen.drawPixel(r+14, c+14);
+		do Screen.drawPixel(r+4, c+15);
+		do Screen.drawPixel(r+15, c+15);
+		do Screen.drawPixel(r, c+18);
+		do Screen.drawPixel(r+19, c+18);
+		do Screen.drawPixel(r+8, c+16);
+		do Screen.drawPixel(r+11, c+16);
+		do Screen.drawLine(r+9, c+15, r+10, c+15);
+		do Screen.drawLine(r+3, c+16, r+4, c+16);
+		do Screen.drawLine(r+15, c+16, r+16, c+16);
+		do Screen.drawLine(r+1, c+17, r+2, c+17);
+		do Screen.drawLine(r+17, c+17, r+18, c+17);
+		do Screen.drawLine(r+7, c+17, r+7, c+18);
+		do Screen.drawLine(r+12, c+17, r+12, c+18);
+		do Screen.drawLine(r, c+19, r+7, c+19);
+		do Screen.drawLine(r+12, c+19, r+19, c+19);
+		//leg
+
         return;
     }
 
@@ -45,15 +90,61 @@ class Player {
 		let r = ref_x + (x * unit);
 		let c = ref_y + (y * unit);
 		do Screen.setColor(false);
+		
+		do Screen.drawLine(r+5, c, r+14, c);
+		do Screen.drawLine(r+4, c+1, r+5, c+1);
+		do Screen.drawLine(r+14, c+1, r+15, c+1);
+		do Screen.drawLine(r+4, c+2, r+4, c+5);
+		do Screen.drawLine(r+15, c+2, r+15, c+5);
+		do Screen.drawPixel(r+3, c+5);
+		do Screen.drawPixel(r+3, c+5);
+		do Screen.drawPixel(r+16, c+5);
+		do Screen.drawLine(r+7, c+2, r+7, c+3);
+		do Screen.drawLine(r+12, c+2, r+12, c+3);
+		do Screen.drawLine(r+9, c+4, r+10, c+4);
+		do Screen.drawPixel(r+7, c+5);
+		do Screen.drawPixel(r+12, c+5);
+		do Screen.drawLine(r+8, c+6, r+11, c+6);
+		do Screen.drawPixel(r+5, c+6);
+		do Screen.drawPixel(r+14, c+6);
+		do Screen.drawPixel(r+6, c+7);
+		do Screen.drawPixel(r+14, c+7);
+		do Screen.drawLine(r+7, c+8, r+12, c+8);
+		//face
 
-		let i = 0;
-		while(i < (unit * unit)){
-			let div_r = i / unit;
-			if(img.charAt(i) = 49){
-				do Screen.drawPixel(r + (i - (unit * div_r)), c + div_r);
-			}
-			let i = i + 1;
-		}
+		do Screen.drawLine(r+2, c+6, r+2, c+7);
+		do Screen.drawLine(r+17, c+6, r+17, c+7);
+		do Screen.drawLine(r+1, c+8, r+1, c+12);
+		do Screen.drawLine(r+18, c+8, r+18, c+12);
+		do Screen.drawLine(r+2, c+13, r+4, c+13);
+		do Screen.drawLine(r+15, c+13, r+17, c+13);
+		do Screen.drawPixel(r+4, c+10);
+		do Screen.drawPixel(r+15, c+10);
+		do Screen.drawLine(r+5, c+10, r+5, c+12);
+		do Screen.drawLine(r+14, c+10, r+14, c+12);
+		do Screen.drawLine(r+6, c+9, r+6, c+13);
+		do Screen.drawLine(r+13, c+9, r+13, c+13);
+		//arm
+
+		do Screen.drawPixel(r+5, c+14);
+		do Screen.drawPixel(r+14, c+14);
+		do Screen.drawPixel(r+4, c+15);
+		do Screen.drawPixel(r+15, c+15);
+		do Screen.drawPixel(r, c+18);
+		do Screen.drawPixel(r+19, c+18);
+		do Screen.drawPixel(r+8, c+16);
+		do Screen.drawPixel(r+11, c+16);
+		do Screen.drawLine(r+9, c+15, r+10, c+15);
+		do Screen.drawLine(r+3, c+16, r+4, c+16);
+		do Screen.drawLine(r+15, c+16, r+16, c+16);
+		do Screen.drawLine(r+1, c+17, r+2, c+17);
+		do Screen.drawLine(r+17, c+17, r+18, c+17);
+		do Screen.drawLine(r+7, c+17, r+7, c+18);
+		do Screen.drawLine(r+12, c+17, r+12, c+18);
+		do Screen.drawLine(r, c+19, r+7, c+19);
+		do Screen.drawLine(r+12, c+19, r+19, c+19);
+		//leg
+
         return;
     }
 

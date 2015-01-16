@@ -822,7 +822,7 @@ push argument 2
 pop this 2
 push constant 0
 return
-function Player.draw 4
+function Player.draw 3
 push argument 0
 pop pointer 0
 push this 4
@@ -841,47 +841,556 @@ push constant 0
 not
 call Screen.setColor 1
 pop temp 0
-push constant 0
-pop local 0
-label WHILE_EXP0
-push local 0
-push this 0
-push this 0
-call Math.multiply 2
-lt
-not
-if-goto WHILE_END0
-push local 0
-push this 0
-call Math.divide 2
-pop local 3
-push this 3
-push local 0
-call String.charAt 2
-push constant 49
-eq
-if-goto IF_TRUE0
-goto IF_FALSE0
-label IF_TRUE0
 push local 1
-push local 0
-push this 0
-push local 3
-call Math.multiply 2
-sub
+push constant 5
 add
 push local 2
-push local 3
+push local 1
+push constant 14
+add
+push local 2
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 4
+add
+push local 2
+push constant 1
+add
+push local 1
+push constant 5
+add
+push local 2
+push constant 1
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 1
+add
+push local 1
+push constant 15
+add
+push local 2
+push constant 1
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 4
+add
+push local 2
+push constant 2
+add
+push local 1
+push constant 4
+add
+push local 2
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 2
+add
+push local 1
+push constant 15
+add
+push local 2
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 3
+add
+push local 2
+push constant 5
 add
 call Screen.drawPixel 2
 pop temp 0
-label IF_FALSE0
-push local 0
+push local 1
+push constant 3
+add
+push local 2
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 16
+add
+push local 2
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 7
+add
+push local 2
+push constant 2
+add
+push local 1
+push constant 7
+add
+push local 2
+push constant 3
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 12
+add
+push local 2
+push constant 2
+add
+push local 1
+push constant 12
+add
+push local 2
+push constant 3
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 9
+add
+push local 2
+push constant 4
+add
+push local 1
+push constant 10
+add
+push local 2
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 7
+add
+push local 2
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 12
+add
+push local 2
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 8
+add
+push local 2
+push constant 6
+add
+push local 1
+push constant 11
+add
+push local 2
+push constant 6
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 5
+add
+push local 2
+push constant 6
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 6
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 6
+add
+push local 2
+push constant 7
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 7
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 7
+add
+push local 2
+push constant 8
+add
+push local 1
+push constant 12
+add
+push local 2
+push constant 8
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 2
+add
+push local 2
+push constant 6
+add
+push local 1
+push constant 2
+add
+push local 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 17
+add
+push local 2
+push constant 6
+add
+push local 1
+push constant 17
+add
+push local 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
 push constant 1
 add
-pop local 0
-goto WHILE_EXP0
-label WHILE_END0
+push local 2
+push constant 8
+add
+push local 1
+push constant 1
+add
+push local 2
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 18
+add
+push local 2
+push constant 8
+add
+push local 1
+push constant 18
+add
+push local 2
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 2
+add
+push local 2
+push constant 13
+add
+push local 1
+push constant 4
+add
+push local 2
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 13
+add
+push local 1
+push constant 17
+add
+push local 2
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 4
+add
+push local 2
+push constant 10
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 10
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 5
+add
+push local 2
+push constant 10
+add
+push local 1
+push constant 5
+add
+push local 2
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 10
+add
+push local 1
+push constant 14
+add
+push local 2
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 6
+add
+push local 2
+push constant 9
+add
+push local 1
+push constant 6
+add
+push local 2
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 13
+add
+push local 2
+push constant 9
+add
+push local 1
+push constant 13
+add
+push local 2
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 5
+add
+push local 2
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 4
+add
+push local 2
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push local 2
+push constant 18
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 19
+add
+push local 2
+push constant 18
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 8
+add
+push local 2
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 11
+add
+push local 2
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 9
+add
+push local 2
+push constant 15
+add
+push local 1
+push constant 10
+add
+push local 2
+push constant 15
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 3
+add
+push local 2
+push constant 16
+add
+push local 1
+push constant 4
+add
+push local 2
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 16
+add
+push local 1
+push constant 16
+add
+push local 2
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 1
+add
+push local 2
+push constant 17
+add
+push local 1
+push constant 2
+add
+push local 2
+push constant 17
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 17
+add
+push local 2
+push constant 17
+add
+push local 1
+push constant 18
+add
+push local 2
+push constant 17
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 7
+add
+push local 2
+push constant 17
+add
+push local 1
+push constant 7
+add
+push local 2
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 12
+add
+push local 2
+push constant 17
+add
+push local 1
+push constant 12
+add
+push local 2
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push local 2
+push constant 19
+add
+push local 1
+push constant 7
+add
+push local 2
+push constant 19
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 12
+add
+push local 2
+push constant 19
+add
+push local 1
+push constant 19
+add
+push local 2
+push constant 19
+add
+call Screen.drawLine 4
+pop temp 0
 push constant 0
 return
 function Player.wipe 4
@@ -902,47 +1411,556 @@ pop local 2
 push constant 0
 call Screen.setColor 1
 pop temp 0
-push constant 0
-pop local 0
-label WHILE_EXP0
-push local 0
-push this 0
-push this 0
-call Math.multiply 2
-lt
-not
-if-goto WHILE_END0
-push local 0
-push this 0
-call Math.divide 2
-pop local 3
-push this 3
-push local 0
-call String.charAt 2
-push constant 49
-eq
-if-goto IF_TRUE0
-goto IF_FALSE0
-label IF_TRUE0
 push local 1
-push local 0
-push this 0
-push local 3
-call Math.multiply 2
-sub
+push constant 5
 add
 push local 2
-push local 3
+push local 1
+push constant 14
+add
+push local 2
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 4
+add
+push local 2
+push constant 1
+add
+push local 1
+push constant 5
+add
+push local 2
+push constant 1
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 1
+add
+push local 1
+push constant 15
+add
+push local 2
+push constant 1
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 4
+add
+push local 2
+push constant 2
+add
+push local 1
+push constant 4
+add
+push local 2
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 2
+add
+push local 1
+push constant 15
+add
+push local 2
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 3
+add
+push local 2
+push constant 5
 add
 call Screen.drawPixel 2
 pop temp 0
-label IF_FALSE0
-push local 0
+push local 1
+push constant 3
+add
+push local 2
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 16
+add
+push local 2
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 7
+add
+push local 2
+push constant 2
+add
+push local 1
+push constant 7
+add
+push local 2
+push constant 3
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 12
+add
+push local 2
+push constant 2
+add
+push local 1
+push constant 12
+add
+push local 2
+push constant 3
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 9
+add
+push local 2
+push constant 4
+add
+push local 1
+push constant 10
+add
+push local 2
+push constant 4
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 7
+add
+push local 2
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 12
+add
+push local 2
+push constant 5
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 8
+add
+push local 2
+push constant 6
+add
+push local 1
+push constant 11
+add
+push local 2
+push constant 6
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 5
+add
+push local 2
+push constant 6
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 6
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 6
+add
+push local 2
+push constant 7
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 7
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 7
+add
+push local 2
+push constant 8
+add
+push local 1
+push constant 12
+add
+push local 2
+push constant 8
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 2
+add
+push local 2
+push constant 6
+add
+push local 1
+push constant 2
+add
+push local 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 17
+add
+push local 2
+push constant 6
+add
+push local 1
+push constant 17
+add
+push local 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
 push constant 1
 add
-pop local 0
-goto WHILE_EXP0
-label WHILE_END0
+push local 2
+push constant 8
+add
+push local 1
+push constant 1
+add
+push local 2
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 18
+add
+push local 2
+push constant 8
+add
+push local 1
+push constant 18
+add
+push local 2
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 2
+add
+push local 2
+push constant 13
+add
+push local 1
+push constant 4
+add
+push local 2
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 13
+add
+push local 1
+push constant 17
+add
+push local 2
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 4
+add
+push local 2
+push constant 10
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 10
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 5
+add
+push local 2
+push constant 10
+add
+push local 1
+push constant 5
+add
+push local 2
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 10
+add
+push local 1
+push constant 14
+add
+push local 2
+push constant 12
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 6
+add
+push local 2
+push constant 9
+add
+push local 1
+push constant 6
+add
+push local 2
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 13
+add
+push local 2
+push constant 9
+add
+push local 1
+push constant 13
+add
+push local 2
+push constant 13
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 5
+add
+push local 2
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 14
+add
+push local 2
+push constant 14
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 4
+add
+push local 2
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 15
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push local 2
+push constant 18
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 19
+add
+push local 2
+push constant 18
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 8
+add
+push local 2
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 11
+add
+push local 2
+push constant 16
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 1
+push constant 9
+add
+push local 2
+push constant 15
+add
+push local 1
+push constant 10
+add
+push local 2
+push constant 15
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 3
+add
+push local 2
+push constant 16
+add
+push local 1
+push constant 4
+add
+push local 2
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 15
+add
+push local 2
+push constant 16
+add
+push local 1
+push constant 16
+add
+push local 2
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 1
+add
+push local 2
+push constant 17
+add
+push local 1
+push constant 2
+add
+push local 2
+push constant 17
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 17
+add
+push local 2
+push constant 17
+add
+push local 1
+push constant 18
+add
+push local 2
+push constant 17
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 7
+add
+push local 2
+push constant 17
+add
+push local 1
+push constant 7
+add
+push local 2
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 12
+add
+push local 2
+push constant 17
+add
+push local 1
+push constant 12
+add
+push local 2
+push constant 18
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push local 2
+push constant 19
+add
+push local 1
+push constant 7
+add
+push local 2
+push constant 19
+add
+call Screen.drawLine 4
+pop temp 0
+push local 1
+push constant 12
+add
+push local 2
+push constant 19
+add
+push local 1
+push constant 19
+add
+push local 2
+push constant 19
+add
+call Screen.drawLine 4
+pop temp 0
 push constant 0
 return
 function Player.move 0
