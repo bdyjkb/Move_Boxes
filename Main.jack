@@ -11,10 +11,10 @@ class Main {
 
 		do Screen.clearScreen();
 		do Screen.setColor(true);
-		do Img1.print();
+		do Img.print_samurai();
 		do Sys.wait(2000);
 		
-		do Loading.run(205, 120, 3);
+		do Loading.run(210, 120, 3);
 		//arguments: x, y, times
 
 		let level = menu.run();
@@ -23,20 +23,21 @@ class Main {
 			let pass = 0;
 
 			if(level = 0){
-				let game = MoveBoxes.new(5, 5, "4444440034402044100444444", 20, 20, 20);
+				let game = MoveBoxes.new(5, 5, "4444440034402044100444444", 80, 60, 20);
 				do game.init();
+				do Tutorial.run();
 				let pass = game.run();
 			}
 
 			if(level = 1){
 				//level 1
-				let game = MoveBoxes.new(9, 7, "444444000430004400402400400400440444420200004410040004444444444", 20, 20, 20);
+				let game = MoveBoxes.new(9, 7, "444444000430004400402400400400440444420200004410040004444444444", 50, 40, 20);
 				do game.init();
 				let pass = pass + game.run();
 
 				if(pass = 1){
 					//level 2
-					let game = MoveBoxes.new(6, 8, "044440440040412040442044440204402004430204444444", 20, 20, 20);
+					let game = MoveBoxes.new(6, 8, "044440440040412040442044440204402004430204444444", 70, 40, 20);
 					do game.init();
 					let pass =  game.run();
 					

@@ -85,12 +85,12 @@ push constant 0
 not
 call Screen.setColor 1
 pop temp 0
-call Img1.print 0
+call Img.print_samurai 0
 pop temp 0
 push constant 2000
 call Sys.wait 1
 pop temp 0
-push constant 205
+push constant 210
 push constant 120
 push constant 3
 call Loading.run 3
@@ -167,13 +167,15 @@ push constant 52
 call String.appendChar 2
 push constant 52
 call String.appendChar 2
-push constant 20
-push constant 20
+push constant 80
+push constant 60
 push constant 20
 call MoveBoxes.new 6
 pop local 0
 push local 0
 call MoveBoxes.init 1
+pop temp 0
+call Tutorial.run 0
 pop temp 0
 push local 0
 call MoveBoxes.run 1
@@ -315,8 +317,8 @@ push constant 52
 call String.appendChar 2
 push constant 52
 call String.appendChar 2
-push constant 20
-push constant 20
+push constant 50
+push constant 40
 push constant 20
 call MoveBoxes.new 6
 pop local 0
@@ -434,8 +436,8 @@ push constant 52
 call String.appendChar 2
 push constant 52
 call String.appendChar 2
-push constant 20
-push constant 20
+push constant 70
+push constant 40
 push constant 20
 call MoveBoxes.new 6
 pop local 0
