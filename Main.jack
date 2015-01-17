@@ -26,7 +26,7 @@ class Main {
 
 			if(level = 1){
 				//level 1
-				let game = MoveBoxes.new(10, 7, "0444444400040000044444244400044001200204400040204444304000400444444440", 20, 20, 20);
+				let game = MoveBoxes.new(9, 7, "444444000430004400402400400400440444420200004410040004444444444", 20, 20, 20);
 				do game.init();
 				let pass = pass + game.run();
 
@@ -34,19 +34,19 @@ class Main {
 					//level 2
 					let game = MoveBoxes.new(6, 8, "044440440040412040442044440204402004430204444444", 20, 20, 20);
 					do game.init();
-					let pass = pass + game.run();
+					let pass =  game.run();
 					
-					if(pass = 2){
+					if(pass = 1){
 						//level 3
 						//let game = MoveBoxes.new();
 						//do game.init();
 						//let pass = pass + game.run();
-						let pass = 3;
+						let pass = 2;
 					}
 				}
 			}
 			
-			if(pass = 3){
+			if(pass = 2){
 				let level = 2;
 			}
 			else{
@@ -61,13 +61,9 @@ class Main {
 
 		do Screen.clearScreen();
 
-		if(pass = 3){
+		if(pass = 2){
 			do Output.moveCursor(12, 20);
 			do Output.printString("Congratulation! you win the game.");
-		}
-		if(pass = 2){
-			do Output.moveCursor(12, 28);
-			do Output.printString("Bye Bye");
 		}
 		if(pass = 1){
 			do Output.moveCursor(12, 28);

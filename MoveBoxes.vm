@@ -545,13 +545,8 @@ pop temp 0
 call Keyboard.readChar 0
 pop local 0
 push constant 0
-call Screen.setColor 1
-pop temp 0
 push constant 0
-push constant 0
-push constant 20
-push constant 20
-call Screen.drawRectangle 4
+call Output.moveCursor 2
 pop temp 0
 push local 0
 return

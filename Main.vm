@@ -176,14 +176,10 @@ eq
 if-goto IF_TRUE1
 goto IF_FALSE1
 label IF_TRUE1
-push constant 10
+push constant 9
 push constant 7
-push constant 70
+push constant 63
 call String.new 1
-push constant 48
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
 push constant 52
 call String.appendChar 2
 push constant 52
@@ -201,86 +197,6 @@ call String.appendChar 2
 push constant 48
 call String.appendChar 2
 push constant 48
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 50
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 49
-call String.appendChar 2
-push constant 50
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 50
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 50
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
-call String.appendChar 2
-push constant 52
 call String.appendChar 2
 push constant 52
 call String.appendChar 2
@@ -288,6 +204,80 @@ push constant 51
 call String.appendChar 2
 push constant 48
 call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 50
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 52
+call String.appendChar 2
+push constant 49
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
+push constant 48
+call String.appendChar 2
 push constant 52
 call String.appendChar 2
 push constant 48
@@ -298,10 +288,6 @@ push constant 48
 call String.appendChar 2
 push constant 52
 call String.appendChar 2
-push constant 48
-call String.appendChar 2
-push constant 48
-call String.appendChar 2
 push constant 52
 call String.appendChar 2
 push constant 52
@@ -318,7 +304,7 @@ push constant 52
 call String.appendChar 2
 push constant 52
 call String.appendChar 2
-push constant 48
+push constant 52
 call String.appendChar 2
 push constant 20
 push constant 20
@@ -447,24 +433,22 @@ pop local 0
 push local 0
 call MoveBoxes.init 1
 pop temp 0
-push local 3
 push local 0
 call MoveBoxes.run 1
-add
 pop local 3
 push local 3
-push constant 2
+push constant 1
 eq
 if-goto IF_TRUE3
 goto IF_FALSE3
 label IF_TRUE3
-push constant 3
+push constant 2
 pop local 3
 label IF_FALSE3
 label IF_FALSE2
 label IF_FALSE1
 push local 3
-push constant 3
+push constant 2
 eq
 if-goto IF_TRUE4
 goto IF_FALSE4
@@ -493,7 +477,7 @@ label WHILE_END0
 call Screen.clearScreen 0
 pop temp 0
 push local 3
-push constant 3
+push constant 2
 eq
 if-goto IF_TRUE6
 goto IF_FALSE6
@@ -574,7 +558,7 @@ call Output.printString 1
 pop temp 0
 label IF_FALSE6
 push local 3
-push constant 2
+push constant 1
 eq
 if-goto IF_TRUE7
 goto IF_FALSE7
@@ -603,40 +587,11 @@ call Output.printString 1
 pop temp 0
 label IF_FALSE7
 push local 3
-push constant 1
+push constant 0
 eq
 if-goto IF_TRUE8
 goto IF_FALSE8
 label IF_TRUE8
-push constant 12
-push constant 28
-call Output.moveCursor 2
-pop temp 0
-push constant 7
-call String.new 1
-push constant 66
-call String.appendChar 2
-push constant 121
-call String.appendChar 2
-push constant 101
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 66
-call String.appendChar 2
-push constant 121
-call String.appendChar 2
-push constant 101
-call String.appendChar 2
-call Output.printString 1
-pop temp 0
-label IF_FALSE8
-push local 3
-push constant 0
-eq
-if-goto IF_TRUE9
-goto IF_FALSE9
-label IF_TRUE9
 push constant 11
 push constant 27
 call Output.moveCursor 2
@@ -685,6 +640,6 @@ push constant 101
 call String.appendChar 2
 call Output.printString 1
 pop temp 0
-label IF_FALSE9
+label IF_FALSE8
 push constant 0
 return
