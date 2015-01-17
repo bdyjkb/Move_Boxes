@@ -289,7 +289,7 @@ push constant 0
 pop local 1
 label WHILE_EXP0
 push local 1
-push constant 5
+push argument 2
 lt
 not
 if-goto WHILE_END0

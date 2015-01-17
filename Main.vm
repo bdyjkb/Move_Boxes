@@ -79,12 +79,21 @@ call Output.printString 1
 pop temp 0
 call Output.println 0
 pop temp 0
-push constant 1000
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+call Img1.print 0
+pop temp 0
+push constant 2000
 call Sys.wait 1
 pop temp 0
 push constant 205
 push constant 120
-call Loading.run 2
+push constant 3
+call Loading.run 3
 pop temp 0
 push local 1
 call Menu.run 1

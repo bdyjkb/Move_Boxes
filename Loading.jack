@@ -1,6 +1,6 @@
 class Loading {
 
-	function void run(int x, int y) {
+	function void run(int x, int y, int times) {
 		var int t, i;
 		var Array wave;
 
@@ -50,7 +50,7 @@ class Loading {
 		do Sys.wait(500);
 
 		let i = 0;
-		while(i < 5){
+		while(i < times){
 			let t = 0;
 			while(t < 17){
 				do Screen.setColor(false);

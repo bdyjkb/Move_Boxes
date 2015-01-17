@@ -9,9 +9,13 @@ class Main {
 		do Output.printString("Are you ready? Game will start later.");
 		do Output.println();
 
-		do Sys.wait(1000);
-
-		do Loading.run(205, 120);
+		do Screen.clearScreen();
+		do Screen.setColor(true);
+		do Img1.print();
+		do Sys.wait(2000);
+		
+		do Loading.run(205, 120, 3);
+		//arguments: x, y, times
 
 		let level = menu.run();
 
