@@ -1,0 +1,55 @@
+class State {
+    field int step;
+    field int cnt;
+
+    constructor State new(int s, int c) {
+        let step = s;
+        let cnt = c;
+
+        do Screen.setColor(true);
+        do Screen.drawRectangle(0, 220, 511, 255);
+        
+        do print();
+
+        return this;
+    }
+
+    method void print() {
+        do Screen.setColor(false);
+        do Screen.drawRectangle(5, 225, 506, 250);
+     
+        do Output.moveCursor(21, 2);
+        do Output.printString("Steps:");
+        do Output.printInt(step);
+
+        do Output.printString(" Left:");
+        do Output.printInt(cnt);
+
+        return ;
+    }
+
+    method void add_step() {
+        let step = step + 1;
+
+        do print();
+
+        return ;
+    }
+
+    method void box_dest() {
+        let cnt = cnt - 1;
+
+        do print();
+
+        return ;
+    }
+
+    method void warn(String w) {
+        do print();
+
+        do Output.printString("  Warn:");
+        do Output.printString(w);
+
+        return ;
+    }
+}
