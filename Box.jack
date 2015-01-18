@@ -15,16 +15,7 @@ class Box {
 		let x = ref_x + (x * unit);
 		let y = ref_y + (y * unit);
         do Screen.setColor(true);
-        do Screen.drawLine(x+6, y+1, x+18, y+1);
-        do Screen.drawLine(x+6, y+1, x+1, y+7);
-        do Screen.drawLine(x+1, y+7, x+13, y+7);
-        do Screen.drawLine(x+18, y+1, x+13, y+7);
-        do Screen.drawLine(x+1, y+7, x+1, y+18);
-        do Screen.drawLine(x+13, y+18, x+1, y+18);
-        do Screen.drawLine(x+13, y+18, x+13, y+7);
-        do Screen.drawLine(x+18, y+1, x+18, y+14);
-        do Screen.drawLine(x+13, y+18, x+18, y+14);
-        do Screen.drawCircle(x+7, y+12, 2);
+		do Img.print_box(x, y);
 		return;
     }
 
@@ -32,18 +23,23 @@ class Box {
 		let x = ref_x + (x * unit);
 		let y = ref_y + (y * unit);
         do Screen.setColor(false);
-        do Screen.drawLine(x+6, y+1, x+18, y+1);
-        do Screen.drawLine(x+6, y+1, x+1, y+7);
-        do Screen.drawLine(x+1, y+7, x+13, y+7);
-        do Screen.drawLine(x+18, y+1, x+13, y+7);
-        do Screen.drawLine(x+1, y+7, x+1, y+18);
-        do Screen.drawLine(x+13, y+18, x+1, y+18);
-        do Screen.drawLine(x+13, y+18, x+13, y+7);
-        do Screen.drawLine(x+18, y+1, x+18, y+14);
-        do Screen.drawLine(x+13, y+18, x+18, y+14);
-        do Screen.drawCircle(x+7, y+12, 2);
+		do Img.print_box(x, y);
         return;
     }
+
+	method void sign_draw(int x, int y){
+		let x = ref_x + (x * unit);
+		let y = ref_y + (y * unit);
+		do Img.print_sign_box(x, y, true);
+		return;
+	}
+
+	method void sign_wipe(int x, int y){
+		let x = ref_x + (x * unit);
+		let y = ref_y + (y * unit);
+		do Img.print_sign_box(x, y, false);
+		return;
+	}
 
     method void move(int now_x, int now_y, int next_x, int next_y){
         do wipe(now_x, now_y);

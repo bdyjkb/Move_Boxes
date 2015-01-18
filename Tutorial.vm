@@ -78,19 +78,19 @@ call Screen.setColor 1
 pop temp 0
 push constant 360
 push constant 68
-call Text.draw_left_arrow 2
+call Img.draw_left_arrow 2
 pop temp 0
 push constant 385
 push constant 65
-call Text.draw_up_arrow 2
+call Img.draw_up_arrow 2
 pop temp 0
 push constant 410
 push constant 65
-call Text.draw_down_arrow 2
+call Img.draw_down_arrow 2
 pop temp 0
 push constant 435
 push constant 68
-call Text.draw_right_arrow 2
+call Img.draw_right_arrow 2
 pop temp 0
 push constant 10
 push constant 42
@@ -159,6 +159,10 @@ call String.appendChar 2
 push constant 108
 call String.appendChar 2
 call Output.printString 1
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
 pop temp 0
 push constant 450
 push constant 170

@@ -9,11 +9,28 @@ class Main {
 		do Output.printString("Are you ready? Game will start later.");
 		do Output.println();
 
+		/*
 		do Screen.clearScreen();
 		do Screen.setColor(true);
 		do Img.print_samurai();
-		do Sys.wait(2000);
+		do Sys.wait(1000);
+		*/
+
+		do Screen.clearScreen();
+		do Screen.setColor(true);
+		do Img.print_box(100, 100);
+		do Img.print_sign_box(100, 130, true);
+		do Img.print_sign_box(130, 100, true);
+		do Screen.setColor(true);
+		do Img.print_box(130, 130);
+		do Sys.wait(3000);
 		
+		do Screen.setColor(false);
+		do Img.print_box(100, 100);
+		do Img.print_sign_box(100, 130, false);
+		do Img.print_sign_box(130, 100, false);
+		do Img.print_box(130, 130);
+
 		do Loading.run(210, 120, 3);
 		//arguments: x, y, times
 

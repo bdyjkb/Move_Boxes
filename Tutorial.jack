@@ -14,10 +14,10 @@ class Tutorial {
 		do Output.printString("press");
 
 		do Screen.setColor(true);
-		do Text.draw_left_arrow(360, 68);
-		do Text.draw_up_arrow(385, 65);
-		do Text.draw_down_arrow(410, 65);
-		do Text.draw_right_arrow(435, 68);
+		do Img.draw_left_arrow(360, 68);
+		do Img.draw_up_arrow(385, 65);
+		do Img.draw_down_arrow(410, 65);
+		do Img.draw_right_arrow(435, 68);
 
 		
 		do Output.moveCursor(10, 42);
@@ -32,6 +32,7 @@ class Tutorial {
 		do Output.moveCursor(16, 51);
 		do Output.printString("Wall");
 
+		do Screen.setColor(true);
 		do Img.print_wall(450, 170);
 		do Img.print_destination(300, 145);
 		do Img.print_box(450, 125);

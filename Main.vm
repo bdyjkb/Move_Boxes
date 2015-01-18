@@ -85,9 +85,55 @@ push constant 0
 not
 call Screen.setColor 1
 pop temp 0
-call Img.print_samurai 0
+push constant 100
+push constant 100
+call Img.print_box 2
 pop temp 0
-push constant 2000
+push constant 100
+push constant 130
+push constant 0
+not
+call Img.print_sign_box 3
+pop temp 0
+push constant 130
+push constant 100
+push constant 0
+not
+call Img.print_sign_box 3
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 130
+push constant 130
+call Img.print_box 2
+pop temp 0
+push constant 3000
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 100
+push constant 100
+call Img.print_box 2
+pop temp 0
+push constant 100
+push constant 130
+push constant 0
+call Img.print_sign_box 3
+pop temp 0
+push constant 130
+push constant 100
+push constant 0
+call Img.print_sign_box 3
+pop temp 0
+push constant 130
+push constant 130
+call Img.print_box 2
+pop temp 0
+push constant 3000
 call Sys.wait 1
 pop temp 0
 push constant 210
