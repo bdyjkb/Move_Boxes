@@ -9,13 +9,6 @@ class Main {
 		do Output.printString("Are you ready? Game will start later.");
 		do Output.println();
 
-		/*
-		do Screen.clearScreen();
-		do Screen.setColor(true);
-		do Img.print_samurai();
-		do Sys.wait(1000);
-		*/
-
 		do Screen.clearScreen();
 		do Screen.setColor(true);
 		do Img.print_box(100, 100);
@@ -23,7 +16,7 @@ class Main {
 		do Img.print_sign_box(130, 100, true);
 		do Screen.setColor(true);
 		do Img.print_box(130, 130);
-		do Sys.wait(3000);
+		do Sys.wait(1000);
 		
 		do Screen.setColor(false);
 		do Img.print_box(100, 100);
@@ -40,6 +33,7 @@ class Main {
 			let pass = 0;
 
 			if(level = 0){
+				do Switching.tutorial();
 				let game = MoveBoxes.new(5, 5, "4444440034402044100444444", 80, 60, 20);
 				do game.init();
 				do Tutorial.run();
@@ -48,12 +42,14 @@ class Main {
 
 			if(level = 1){
 				//level 1
+				do Switching.levelOne();
 				let game = MoveBoxes.new(9, 7, "444444000430004400402400400400440444420200004410040004444444444", 50, 40, 20);
 				do game.init();
-				let pass = pass + game.run();
+				let pass = game.run();
 
 				if(pass = 1){
 					//level 2
+					do Switching.levelTwo();
 					let game = MoveBoxes.new(6, 8, "044440440040412040442044440204402004430204444444", 70, 40, 20);
 					do game.init();
 					let pass =  game.run();

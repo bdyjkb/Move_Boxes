@@ -109,7 +109,7 @@ push constant 130
 push constant 130
 call Img.print_box 2
 pop temp 0
-push constant 3000
+push constant 1000
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -132,9 +132,6 @@ pop temp 0
 push constant 130
 push constant 130
 call Img.print_box 2
-pop temp 0
-push constant 3000
-call Sys.wait 1
 pop temp 0
 push constant 210
 push constant 120
@@ -159,6 +156,8 @@ eq
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
+call Switching.tutorial 0
+pop temp 0
 push constant 5
 push constant 5
 push constant 25
@@ -233,6 +232,8 @@ eq
 if-goto IF_TRUE1
 goto IF_FALSE1
 label IF_TRUE1
+call Switching.levelOne 0
+pop temp 0
 push constant 9
 push constant 7
 push constant 63
@@ -371,10 +372,8 @@ pop local 0
 push local 0
 call MoveBoxes.init 1
 pop temp 0
-push local 3
 push local 0
 call MoveBoxes.run 1
-add
 pop local 3
 push local 3
 push constant 1
@@ -382,6 +381,8 @@ eq
 if-goto IF_TRUE2
 goto IF_FALSE2
 label IF_TRUE2
+call Switching.levelTwo 0
+pop temp 0
 push constant 6
 push constant 8
 push constant 48

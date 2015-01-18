@@ -1,0 +1,469 @@
+function Switching.tutorial 1
+push constant 60
+pop local 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+push constant 0
+push constant 511
+push constant 255
+call Screen.drawRectangle 4
+pop temp 0
+label WHILE_EXP0
+push local 0
+push constant 127
+lt
+not
+if-goto WHILE_END0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 255
+push constant 127
+push local 0
+call Screen.drawCircle 3
+pop temp 0
+push constant 10
+push constant 24
+call Output.moveCursor 2
+pop temp 0
+push constant 15
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 85
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push local 0
+push constant 2
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+pop local 0
+label WHILE_EXP1
+push local 0
+push constant 127
+lt
+not
+if-goto WHILE_END1
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 255
+push local 0
+sub
+push constant 127
+push constant 127
+call Screen.drawCircle 3
+pop temp 0
+push constant 255
+push local 0
+add
+push constant 127
+push constant 127
+call Screen.drawCircle 3
+pop temp 0
+push constant 10
+push constant 24
+call Output.moveCursor 2
+pop temp 0
+push constant 15
+call String.new 1
+push constant 84
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 85
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push local 0
+push constant 2
+add
+pop local 0
+goto WHILE_EXP1
+label WHILE_END1
+push constant 500
+call Sys.wait 1
+pop temp 0
+push constant 0
+return
+function Switching.levelOne 1
+push constant 60
+pop local 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+push constant 0
+push constant 511
+push constant 255
+call Screen.drawRectangle 4
+pop temp 0
+label WHILE_EXP0
+push local 0
+push constant 127
+lt
+not
+if-goto WHILE_END0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 255
+push constant 127
+push local 0
+call Screen.drawCircle 3
+pop temp 0
+push constant 10
+push constant 23
+call Output.moveCursor 2
+pop temp 0
+push constant 17
+call String.new 1
+push constant 76
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 86
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push local 0
+push constant 2
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+pop local 0
+label WHILE_EXP1
+push local 0
+push constant 127
+lt
+not
+if-goto WHILE_END1
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 255
+push local 0
+sub
+push constant 127
+push constant 127
+call Screen.drawCircle 3
+pop temp 0
+push constant 255
+push local 0
+add
+push constant 127
+push constant 127
+call Screen.drawCircle 3
+pop temp 0
+push constant 10
+push constant 23
+call Output.moveCursor 2
+pop temp 0
+push constant 17
+call String.new 1
+push constant 76
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 86
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push local 0
+push constant 2
+add
+pop local 0
+goto WHILE_EXP1
+label WHILE_END1
+push constant 500
+call Sys.wait 1
+pop temp 0
+push constant 0
+return
+function Switching.levelTwo 1
+push constant 60
+pop local 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+push constant 0
+push constant 511
+push constant 255
+call Screen.drawRectangle 4
+pop temp 0
+label WHILE_EXP0
+push local 0
+push constant 127
+lt
+not
+if-goto WHILE_END0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 255
+push constant 127
+push local 0
+call Screen.drawCircle 3
+pop temp 0
+push constant 10
+push constant 23
+call Output.moveCursor 2
+pop temp 0
+push constant 17
+call String.new 1
+push constant 76
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 86
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push local 0
+push constant 2
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+pop local 0
+label WHILE_EXP1
+push local 0
+push constant 127
+lt
+not
+if-goto WHILE_END1
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 255
+push local 0
+sub
+push constant 127
+push constant 127
+call Screen.drawCircle 3
+pop temp 0
+push constant 255
+push local 0
+add
+push constant 127
+push constant 127
+call Screen.drawCircle 3
+pop temp 0
+push constant 10
+push constant 23
+call Output.moveCursor 2
+pop temp 0
+push constant 17
+call String.new 1
+push constant 76
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 86
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 69
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 87
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 30
+call Sys.wait 1
+pop temp 0
+push local 0
+push constant 2
+add
+pop local 0
+goto WHILE_EXP1
+label WHILE_END1
+push constant 500
+call Sys.wait 1
+pop temp 0
+push constant 0
+return

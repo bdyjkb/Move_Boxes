@@ -154,5 +154,4 @@ class Text {
 		do Screen.drawRectangle(x, y+13, x+2, y+15);
 		return;
 	}
-
 }
