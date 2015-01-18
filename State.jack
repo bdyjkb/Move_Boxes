@@ -36,8 +36,8 @@ class State {
         return ;
     }
 
-    method void box_dest() {
-        let cnt = cnt - 1;
+    method void box_left(int c) {
+        let cnt = c;
 
         do print();
 

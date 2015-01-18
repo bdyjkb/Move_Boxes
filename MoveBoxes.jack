@@ -35,19 +35,27 @@ class MoveBoxes {
 			let now_x = i - (now_y * row_length);
 
 			let type = map.charAt(i) - 48;
-			if(type = 4) {
-				do wall.draw(now_x, now_y);
-			}
-			if(type = 2) {
-				do box.draw(now_x, now_y);
-				let box_cnt = box_cnt + 1;
-			}
+			// player
 			if(type = 1) {
 				do player.set_pos(now_x, now_y);
 				do player.draw();
 			}
+			// box
+			if(type = 2) {
+				do box.draw(now_x, now_y);
+				let box_cnt = box_cnt + 1;
+			}	
+			// dest	
 			if(type = 3) {
 				do wall.draw_dest(now_x, now_y);
+			}
+			// wall
+			if(type = 4) {
+				do wall.draw(now_x, now_y);
+			}
+			// sign_box
+			if(type = 5) {
+				do box.sign_draw(now_x, now_y);
 			}
 
 			let i = i + 1;
@@ -80,7 +88,7 @@ class MoveBoxes {
 			let pos_x = player.get_x();
 			let pos_y = player.get_y();
 
-			//up
+			// up
 			if(key = 131) {
 				let now_x = pos_x;
 				let now_y = pos_y - 1;
@@ -88,7 +96,7 @@ class MoveBoxes {
 				let next_x = now_x;
 				let next_y = now_y - 1;
 			}
-			//down
+			// down
 			if(key = 133) {
 				let now_x = pos_x;
 				let now_y = pos_y + 1;
@@ -96,7 +104,7 @@ class MoveBoxes {
 				let next_x = now_x;
 				let next_y = now_y + 1;
 			}
-			//left
+			// left
 			if(key = 130) {
 				let now_x = pos_x - 1;
 				let now_y = pos_y;
@@ -104,7 +112,7 @@ class MoveBoxes {
 				let next_x = now_x - 1;
 				let next_y = now_y;
 			}
-			//right
+			// right
 			if(key = 132) {
 				let now_x = pos_x + 1;
 				let now_y = pos_y;
@@ -140,26 +148,36 @@ class MoveBoxes {
 					do player.set_pos(now_x, now_y);
 					do state.add_step();
 					
-					do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
+					if(map.charAt(pos_y * row_length + pos_x) - 48 = 3) {
+						do wall.draw_dest(pos_x, pos_y);
+					}
+					else {
+						do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
+					}
 					do map.setCharAt(now_y * row_length + now_x, 1 + 48);
 					do map.setCharAt(next_y * row_length + next_x, 2 + 48);
 				}
 				if(next_type = 3) {
 					do wall.wipe_dest(next_x, next_y);
-					do box.move(now_x, now_y, next_x, next_y);
+					do box.sign_draw(next_x, next_y);
+					do box.wipe(now_x, now_y);
 					do player.move(now_x, now_y);
+					
 					do player.set_pos(now_x, now_y);
-					do state.add_step();
-
-					do Sys.wait(500);
-					do box.wipe(next_x, next_y);
-					do wall.draw_dest(next_x, next_y);
-					do state.box_dest();
-
-					do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
-					do map.setCharAt(now_y * row_length + now_x, 1 + 48);
 
 					let box_cnt = box_cnt - 1;
+
+					do state.add_step();
+					do state.box_left(box_cnt);
+					
+					if(map.charAt(pos_y * row_length + pos_x) - 48 = 3) {
+						do wall.draw_dest(pos_x, pos_y);
+					}
+					else {
+						do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
+					}
+					do map.setCharAt(now_y * row_length + now_x, 1 + 48);
+					do map.setCharAt(next_y * row_length + next_x, 5 + 48);
 				}
 				if(next_type = 2) {
 					do state.warn("You're too WEAK!!");
@@ -167,19 +185,79 @@ class MoveBoxes {
 				if(next_type = 4) {
 					do state.warn("Don't push!! You will crush the box.");
 				}
+				if(next_type = 5) {
+					do state.warn("You're too WEAK!!");
+				}
 			}
 			if(type = 3) {
 				do wall.wipe_dest(now_x, now_y);
 				do player.move(now_x, now_y);
 				do player.set_pos(now_x, now_y);
+
 				do state.add_step();
-
-				do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
-
 				do state.warn("Kerker! I hide the flag!");
+	
+				if(map.charAt(pos_y * row_length + pos_x) - 48 = 3) {
+					do wall.draw_dest(pos_x, pos_y);
+				}
+				else {
+					do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
+				}
 			}
 			if(type = 4) {
 				do state.warn("The wall is harder than your head!!");
+			}
+			if(type = 5) {
+				let next_type = map.charAt(next_y * row_length + next_x) - 48; 
+				
+				if(next_type = 0) {
+					do box.sign_wipe(now_x, now_y);
+					do box.draw(next_x, next_y);
+					do player.move(now_x, now_y);
+					do player.set_pos(now_x, now_y);
+
+					let box_cnt = box_cnt + 1;
+
+					do state.add_step();
+					do state.box_left(box_cnt);
+					
+					if(map.charAt(pos_y * row_length + pos_x) - 48 = 3) {
+						do wall.draw_dest(pos_x, pos_y);
+					}
+					else {
+						do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
+					}
+					do map.setCharAt(now_y * row_length + now_x, 3 + 48);
+					do map.setCharAt(next_y * row_length + next_x, 2 + 48);	
+				}
+				if(next_type = 3) {
+					do wall.wipe_dest(next_x, next_y);
+					do box.sign_draw(next_x, next_y);
+					do box.sign_wipe(now_x, now_y);
+					do player.move(now_x, now_y);
+					
+					do player.set_pos(now_x, now_y);
+
+					do state.add_step();
+					
+					if(map.charAt(pos_y * row_length + pos_x) - 48 = 3) {
+						do wall.draw_dest(pos_x, pos_y);
+					}
+					else {
+						do map.setCharAt(pos_y * row_length + pos_x, 0 + 48);
+					}
+					do map.setCharAt(now_y * row_length + now_x, 3 + 48);
+					do map.setCharAt(next_y * row_length + next_x, 5 + 48);	
+				}
+				if(next_type = 2) {
+					do state.warn("You're too WEAK!!");
+				}
+				if(next_type = 4) {
+					do state.warn("Don't push!! You will crush the box.");
+				}
+				if(next_type = 5) {
+					do state.warn("You're too WEAK!!");
+				}
 			}
 
 			do Sys.wait(40);

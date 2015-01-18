@@ -89,12 +89,10 @@ call State.print 1
 pop temp 0
 push constant 0
 return
-function State.box_dest 0
+function State.box_left 0
 push argument 0
 pop pointer 0
-push this 1
-push constant 1
-sub
+push argument 1
 pop this 1
 push pointer 0
 call State.print 1
