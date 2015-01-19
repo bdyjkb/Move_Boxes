@@ -1,127 +1,33 @@
 class Switching {
-	
-	function void tutorial(){
-		var int r;
-		let r = 60;
 
-		do Screen.setColor(true);
-		do Screen.drawRectangle(0, 0, 511, 255);
-
-		while(r < 127){
-			do Screen.setColor(false);
-			do Screen.drawCircle(255, 127, r);
-			do Output.moveCursor(10, 24);
-			do Output.printString("T U T O R I A L");
-			do Sys.wait(20);
-			let r = r + 2;
-		}
-		let r = 0;
-		while(r < 127){
-			do Screen.setColor(false);
-			do Screen.drawCircle(255-r, 127, 127);
-			do Screen.drawCircle(255+r, 127, 127);
-			do Output.moveCursor(10, 24);
-			do Output.printString("T U T O R I A L");
-			do Sys.wait(10);
-			let r = r + 2;
-		}
+	function void run(String s, int r, int c){
+		var int len, half_len, i;
+		let len = s.length();
+		let half_len = len / 2;
+		let i = 0;
 		do Screen.clearScreen();
-		do Output.moveCursor(10, 24);
-		do Output.printString("T U T O R I A L");
-		do Sys.wait(500);
+		while(i < half_len){
+			do Output.moveCursor(r, c+i);
+			do Output.printChar(s.charAt(i));
+			do Sys.wait(50);
+			do Output.moveCursor(r, c+len-1-i);
+			do Output.printChar(s.charAt(len-i-1));
+			do Sys.wait(50);
+			let i = i + 1;
+		}
+		if((len - ((len/2)*2)) = 0){
+			do Output.moveCursor(r, c+half_len-1);
+			do Output.printChar(s.charAt(half_len-1));
+			do Sys.wait(50);
+			do Output.moveCursor(r, c+half_len);
+			do Output.printChar(s.charAt(half_len));
+		}
+		else{
+			do Output.moveCursor(r, c+half_len);
+			do Output.printChar(s.charAt(half_len));
+		}
+		do Sys.wait(1000);
 		return;
 	}
-	function void levelOne(){
-		var int r;
-		let r = 60;
 
-		do Screen.setColor(true);
-		do Screen.drawRectangle(0, 0, 511, 255);
-
-		while(r < 127){
-			do Screen.setColor(false);
-			do Screen.drawCircle(255, 127, r);
-			do Output.moveCursor(10, 23);
-			do Output.printString("L E V E L   O N E");
-			do Sys.wait(20);
-			let r = r + 2;
-		}
-		let r = 0;
-		while(r < 127){
-			do Screen.setColor(false);
-			do Screen.drawCircle(255-r, 127, 127);
-			do Screen.drawCircle(255+r, 127, 127);
-			do Output.moveCursor(10, 23);
-			do Output.printString("L E V E L   O N E");
-			do Sys.wait(10);
-			let r = r + 2;
-		}
-		do Screen.clearScreen();
-		do Output.moveCursor(10, 23);
-		do Output.printString("L E V E L   O N E");
-		do Sys.wait(500);
-		return;
-	}
-	function void levelTwo(){
-		var int r;
-		let r = 60;
-
-		do Screen.setColor(true);
-		do Screen.drawRectangle(0, 0, 511, 255);
-
-		while(r < 127){
-			do Screen.setColor(false);
-			do Screen.drawCircle(255, 127, r);
-			do Output.moveCursor(10, 23);
-			do Output.printString("L E V E L   T W O");
-			do Sys.wait(20);
-			let r = r + 2;
-		}
-		let r = 0;
-		while(r < 127){
-			do Screen.setColor(false);
-			do Screen.drawCircle(255-r, 127, 127);
-			do Screen.drawCircle(255+r, 127, 127);
-			do Output.moveCursor(10, 23);
-			do Output.printString("L E V E L   T W O");
-			do Sys.wait(10);
-			let r = r + 2;
-		}
-		do Screen.clearScreen();
-		do Output.moveCursor(10, 23);
-		do Output.printString("L E V E L   T W O");
-		do Sys.wait(500);
-		return;
-	}
-	function void levelThree(){
-		var int r;
-		let r = 60;
-
-		do Screen.setColor(true);
-		do Screen.drawRectangle(0, 0, 511, 255);
-
-		while(r < 127){
-			do Screen.setColor(false);
-			do Screen.drawCircle(255, 127, r);
-			do Output.moveCursor(10, 21);
-			do Output.printString("L E V E L   T H R E E");
-			do Sys.wait(20);
-			let r = r + 2;
-		}
-		let r = 0;
-		while(r < 127){
-			do Screen.setColor(false);
-			do Screen.drawCircle(255-r, 127, 127);
-			do Screen.drawCircle(255+r, 127, 127);
-			do Output.moveCursor(10, 21);
-			do Output.printString("L E V E L   T H R E E");
-			do Sys.wait(10);
-			let r = r + 2;
-		}
-		do Screen.clearScreen();
-		do Output.moveCursor(10, 21);
-		do Output.printString("L E V E L   T H R E E");
-		do Sys.wait(500);
-		return;
-	}
 }

@@ -14,11 +14,27 @@ class Win {
 	}
 
 	method void run(){
-		var int t;
+		var int t, y, x, i, len, half_len, len;
+		var String s;
 
 		do Screen.clearScreen();
-		do Output.moveCursor(16, 18);
-		do Output.printString("C O N G R A T U L A T I O N");
+		do Sys.wait(300);
+		let s = "C O N G R A T U L A T I O N";
+		let len = 27;
+		let i = 12;
+		let y = 16;
+		let x = 18;
+		while(i > -1){
+			do Output.moveCursor(y, x+i);
+			do Output.printChar(s.charAt(i));
+			do Sys.wait(50);
+			do Output.moveCursor(y, x+len-1-i);
+			do Output.printChar(s.charAt(len-i-1));
+			do Sys.wait(50);
+			let i = i - 1;
+		}
+		
+
 		do Sys.wait(500);
 
 		let t = 0;

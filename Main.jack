@@ -22,7 +22,7 @@ class Main {
 			let pass = 0;
 
 			if(level = 0){
-				do Switching.tutorial();
+				do Switching.run("T U T O R I A L", 10, 24);
 				let game = MoveBoxes.new(8, 8, "0044400000434000004044444442123443020444444424000004340000044400", 40, 30, 20);
 				do game.init();
 				do Tutorial.run();
@@ -33,7 +33,7 @@ class Main {
 
 			if(level = 1){
 				//level 1
-				do Switching.levelOne();
+				do Switching.run("L E V E L   O N E", 10, 23);
 				let game = MoveBoxes.new(6, 8, "044440440040412040442044440204432004433534444444", 75, 35, 20);
 				do game.init();
 				do Sidebar.run();
@@ -42,7 +42,7 @@ class Main {
 
 				if(pass = 1){
 					//level 2
-					do Switching.levelTwo();
+					do Switching.run("L E V E L   T W O", 10, 23);
 					let game = MoveBoxes.new(10, 7, "0004444440044400004044302440444332020014433020204444444400400000044440", 35, 45, 20);
 					do game.init();
 					do Sidebar.run();
@@ -51,7 +51,7 @@ class Main {
 					
 					if(pass = 1){
 						//level 3
-						do Switching.levelThree();
+						do Switching.run("L E V E L   T H R E E", 10, 21);
 						let game = MoveBoxes.new(8, 8, "0044440000433400044034400400234044020044400422044001000444444444", 40, 30, 20);
 						do game.init();
 						do Sidebar.run();
@@ -76,9 +76,10 @@ class Main {
 			do win.run();
 			do win.dispose();
 		}
-		
+
 		let ed = Ending.new();
 		do ed.run();
+		do Sys.wait(2000);
 		do ed.dispose();
 		return;
 	}
