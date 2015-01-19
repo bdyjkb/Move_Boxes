@@ -1278,6 +1278,9 @@ eq
 if-goto IF_TRUE27
 goto IF_FALSE27
 label IF_TRUE27
+push constant 1500
+call Sys.wait 1
+pop temp 0
 call Screen.clearScreen 0
 pop temp 0
 push constant 1
