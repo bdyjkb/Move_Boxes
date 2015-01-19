@@ -3,10 +3,15 @@ class Main {
 	function void main() {
 		var MoveBoxes game;
 		var Menu menu;
+		var Win win;
+		var Opening op;
+		var Ending ed;
 		var int level;
 		var int pass;
 
-		do Opening.run(250, 0);
+		let op = Opening.new(250, 0);
+		do op.run();
+		do op.dispose();
 
 		do Loading.run(190, 120, 3);
 		//arguments: x, y, times
@@ -67,13 +72,14 @@ class Main {
 		do Screen.clearScreen();
 
 		if(pass = 2){
-			do Output.moveCursor(12, 20);
-			do Output.printString("Congratulation! you win the game.");
+			let win = Win.new();
+			do win.run();
+			do win.dispose();
 		}
-		else{
-			do Output.moveCursor(13, 28);
-			do Output.printString("Bye Bye");
-		}
+		
+		let ed = Ending.new();
+		do ed.run();
+		do ed.dispose();
 		return;
 	}
 }

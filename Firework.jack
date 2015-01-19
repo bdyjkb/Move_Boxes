@@ -1,0 +1,134 @@
+class Firework {
+
+	field int x, y;
+	field int vel_x, vel_y;
+	field int duration;
+	field boolean launch;
+
+	constructor Firework new(int a, int b, int c, int d, int e){
+		let x = a;
+		let y = b;
+		let vel_x = c;
+		let vel_y = d;
+		let duration = e;
+		let launch = false;
+		return this;
+	}
+
+	method void launch(){
+		let launch = true;
+		return;
+	}
+
+	method void refresh(){
+		if(launch) {
+			if(duration < 1){
+				do explode();
+			}
+			else{
+				do move();
+			}
+			let duration = duration - 1;
+		}
+		return;
+	}
+
+	method void move(){
+		do Screen.setColor(false);
+		do draw_bold_line(x+vel_x, y+vel_y, x, y);
+		let x = x + vel_x;
+		let y = y + vel_y;
+		do Screen.setColor(true);
+		do draw_bold_line(x+vel_x, y+vel_y, x, y);
+		return;
+	}
+
+	method void explode(){
+		if(duration = 0){
+			do Screen.setColor(false);
+			do draw_bold_line(x+vel_x, y+vel_y, x, y);
+			let x = x + vel_x;
+			let y = y + vel_y;
+			do Screen.setColor(true);
+			do Screen.drawCircle(x, y, 5);
+			do draw_bold_line(x, y+7, x, y+12);
+			do draw_bold_line(x+7, y, x+12, y);
+			do draw_bold_line(x, y-7, x, y-12);
+			do draw_bold_line(x-7, y, x-12, y);
+			do draw_bold_line(x+5, y+5, x+9, y+9);
+			do draw_bold_line(x+5, y-5, x+9, y-9);
+			do draw_bold_line(x-5, y-5, x-9, y-9);
+			do draw_bold_line(x-5, y+5, x-9, y+9);
+		}
+		else{
+			if(duration = -1){
+				do Screen.setColor(true);
+				do Screen.drawLine(x, y+15, x, y+25);
+				do Screen.drawLine(x+8, y+13, x+12, y+22);
+				do Screen.drawLine(x+11, y+11, x+18, y+18);
+				do Screen.drawLine(x+13, y+8, x+22, y+12);
+				do Screen.drawLine(x+15, y, x+25, y);
+				do Screen.drawLine(x+13, y-8, x+22, y-12);
+				do Screen.drawLine(x+11, y-11, x+18, y-18);
+				do Screen.drawLine(x+8, y-13, x+12, y-22);
+				do Screen.drawLine(x, y-15, x, y-25);
+				do Screen.drawLine(x-8, y-13, x-12, y-22);
+				do Screen.drawLine(x-11, y-11, x-18, y-18);
+				do Screen.drawLine(x-13, y-8, x-22, y-12);
+				do Screen.drawLine(x-15, y, x-25, y);
+				do Screen.drawLine(x-13, y+8, x-22, y+12);
+				do Screen.drawLine(x-11, y+11, x-18, y+18);
+				do Screen.drawLine(x-8, y+13, x-12, y+22);
+			}
+			if(duration < -3){
+				do Screen.setColor(false);
+				do Screen.drawCircle(x, y, 5);
+				do draw_bold_line(x, y+7, x, y+12);
+				do draw_bold_line(x+7, y, x+12, y);
+				do draw_bold_line(x, y-7, x, y-12);
+				do draw_bold_line(x-7, y, x-12, y);
+				do draw_bold_line(x+5, y+5, x+9, y+9);
+				do draw_bold_line(x+5, y-5, x+9, y-9);
+				do draw_bold_line(x-5, y-5, x-9, y-9);
+				do draw_bold_line(x-5, y+5, x-9, y+9);
+				
+				do Screen.drawLine(x, y+15, x, y+25);
+				do Screen.drawLine(x+8, y+13, x+12, y+22);
+				do Screen.drawLine(x+11, y+11, x+18, y+18);
+				do Screen.drawLine(x+13, y+8, x+22, y+12);
+				do Screen.drawLine(x+15, y, x+25, y);
+				do Screen.drawLine(x+13, y-8, x+22, y-12);
+				do Screen.drawLine(x+11, y-11, x+18, y-18);
+				do Screen.drawLine(x+8, y-13, x+12, y-22);
+				do Screen.drawLine(x, y-15, x, y-25);
+				do Screen.drawLine(x-8, y-13, x-12, y-22);
+				do Screen.drawLine(x-11, y-11, x-18, y-18);
+				do Screen.drawLine(x-13, y-8, x-22, y-12);
+				do Screen.drawLine(x-15, y, x-25, y);
+				do Screen.drawLine(x-13, y+8, x-22, y+12);
+				do Screen.drawLine(x-11, y+11, x-18, y+18);
+				do Screen.drawLine(x-8, y+13, x-12, y+22);
+				let launch = false;
+			}
+		}
+		return;
+	}
+
+	method void draw_bold_line(int x1, int y1, int x2, int y2){
+		do Screen.drawLine(x1+1, y1+1, x2+1, y2+1);
+		do Screen.drawLine(x1+1, y1, x2+1, y2);
+		do Screen.drawLine(x1+1, y1-1, x2+1, y2-1);
+		do Screen.drawLine(x1, y1+1, x2, y2+1);
+		do Screen.drawLine(x1, y1, x2, y2);
+		do Screen.drawLine(x1, y1-1, x2, y2-1);
+		do Screen.drawLine(x1-1, y1+1, x2-1, y2+1);
+		do Screen.drawLine(x1-1, y1, x2-1, y2);
+		do Screen.drawLine(x1-1, y1-1, x2-1, y2-1);
+		return;
+	}
+
+	method void dispose(){
+		do Memory.deAlloc(this);
+		return;
+	}
+}

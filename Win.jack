@@ -1,0 +1,63 @@
+class Win {
+
+	field Firework a, b, c, d, e, f, g;
+	
+	constructor Win new(){
+		let a = Firework.new(10, 250, 5, -9, 20);
+		let b = Firework.new(450, 250, -4, -8, 20);
+		let c = Firework.new(20, 250, 1, -8, 25);
+		let d = Firework.new(470, 250, -2, -7, 25);
+		let e = Firework.new(40, 250, 6, -13, 15);
+		let f = Firework.new(500, 250, -5, -10, 15);
+		let g = Firework.new(50, 250, 10, -10, 20);
+		return this;
+	}
+
+	method void run(){
+		var int t;
+
+		do Screen.clearScreen();
+		do Output.moveCursor(16, 18);
+		do Output.printString("C O N G R A T U L A T I O N");
+		do Sys.wait(500);
+
+		let t = 0;
+		do a.launch();
+		while(t < 90){
+			if(t = 10){do b.launch();}
+			if(t = 20){do c.launch();}
+			if(t = 30){do d.launch();}
+			if(t = 40){do e.launch();}
+			if(t = 50){do f.launch();}
+			if(t = 60){do g.launch();}
+			do a.refresh();
+			do Sys.wait(20);
+			do b.refresh();
+			do Sys.wait(20);
+			do c.refresh();
+			do Sys.wait(20);
+			do d.refresh();
+			do Sys.wait(20);
+			do e.refresh();
+			do Sys.wait(20);
+			do f.refresh();
+			do Sys.wait(20);
+			do g.refresh();
+			do Sys.wait(20);
+			let t = t + 1;
+		}
+		return;
+	}
+
+	method void dispose(){
+		do a.dispose();
+		do b.dispose();
+		do c.dispose();
+		do d.dispose();
+		do e.dispose();
+		do f.dispose();
+		do g.dispose();
+		do Memory.deAlloc(this);
+		return;
+	}
+}

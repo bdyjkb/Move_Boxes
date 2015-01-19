@@ -1,7 +1,13 @@
-function Main.main 4
+function Main.main 7
 push constant 250
 push constant 0
-call Opening.run 2
+call Opening.new 2
+pop local 3
+push local 3
+call Opening.run 1
+pop temp 0
+push local 3
+call Opening.dispose 1
 pop temp 0
 push constant 190
 push constant 120
@@ -10,17 +16,17 @@ call Loading.run 3
 pop temp 0
 push local 1
 call Menu.run 1
-pop local 2
+pop local 5
 label WHILE_EXP0
-push local 2
+push local 5
 push constant 2
 eq
 not
 not
 if-goto WHILE_END0
 push constant 0
-pop local 3
-push local 2
+pop local 6
+push local 5
 push constant 0
 eq
 if-goto IF_TRUE0
@@ -172,14 +178,14 @@ call Tutorial.run 0
 pop temp 0
 push local 0
 call MoveBoxes.run 1
-pop local 3
+pop local 6
 push constant 1
-pop local 3
+pop local 6
 push local 0
 call MoveBoxes.dispose 1
 pop temp 0
 label IF_FALSE0
-push local 2
+push local 5
 push constant 1
 eq
 if-goto IF_TRUE1
@@ -299,11 +305,11 @@ call Sidebar.run 0
 pop temp 0
 push local 0
 call MoveBoxes.run 1
-pop local 3
+pop local 6
 push local 0
 call MoveBoxes.dispose 1
 pop temp 0
-push local 3
+push local 6
 push constant 1
 eq
 if-goto IF_TRUE2
@@ -467,11 +473,11 @@ call Sidebar.run 0
 pop temp 0
 push local 0
 call MoveBoxes.run 1
-pop local 3
+pop local 6
 push local 0
 call MoveBoxes.dispose 1
 pop temp 0
-push local 3
+push local 6
 push constant 1
 eq
 if-goto IF_TRUE3
@@ -621,139 +627,57 @@ call MoveBoxes.init 1
 pop temp 0
 call Sidebar.run 0
 pop temp 0
-push local 3
+push local 6
 push local 0
 call MoveBoxes.run 1
 add
-pop local 3
+pop local 6
 push local 0
 call MoveBoxes.dispose 1
 pop temp 0
 label IF_FALSE3
 label IF_FALSE2
 label IF_FALSE1
-push local 3
+push local 6
 push constant 2
 eq
 if-goto IF_TRUE4
 goto IF_FALSE4
 label IF_TRUE4
 push constant 2
-pop local 2
+pop local 5
 goto IF_END4
 label IF_FALSE4
 push local 1
 call Menu.run 1
-pop local 2
+pop local 5
 label IF_END4
 goto WHILE_EXP0
 label WHILE_END0
 call Screen.clearScreen 0
 pop temp 0
-push local 3
+push local 6
 push constant 2
 eq
 if-goto IF_TRUE5
 goto IF_FALSE5
 label IF_TRUE5
-push constant 12
-push constant 20
-call Output.moveCursor 2
+call Win.new 0
+pop local 2
+push local 2
+call Win.run 1
 pop temp 0
-push constant 33
-call String.new 1
-push constant 67
-call String.appendChar 2
-push constant 111
-call String.appendChar 2
-push constant 110
-call String.appendChar 2
-push constant 103
-call String.appendChar 2
-push constant 114
-call String.appendChar 2
-push constant 97
-call String.appendChar 2
-push constant 116
-call String.appendChar 2
-push constant 117
-call String.appendChar 2
-push constant 108
-call String.appendChar 2
-push constant 97
-call String.appendChar 2
-push constant 116
-call String.appendChar 2
-push constant 105
-call String.appendChar 2
-push constant 111
-call String.appendChar 2
-push constant 110
-call String.appendChar 2
-push constant 33
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 121
-call String.appendChar 2
-push constant 111
-call String.appendChar 2
-push constant 117
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 119
-call String.appendChar 2
-push constant 105
-call String.appendChar 2
-push constant 110
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 116
-call String.appendChar 2
-push constant 104
-call String.appendChar 2
-push constant 101
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 103
-call String.appendChar 2
-push constant 97
-call String.appendChar 2
-push constant 109
-call String.appendChar 2
-push constant 101
-call String.appendChar 2
-push constant 46
-call String.appendChar 2
-call Output.printString 1
+push local 2
+call Win.dispose 1
 pop temp 0
-goto IF_END5
 label IF_FALSE5
-push constant 13
-push constant 28
-call Output.moveCursor 2
+call Ending.new 0
+pop local 4
+push local 4
+call Ending.run 1
 pop temp 0
-push constant 7
-call String.new 1
-push constant 66
-call String.appendChar 2
-push constant 121
-call String.appendChar 2
-push constant 101
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 66
-call String.appendChar 2
-push constant 121
-call String.appendChar 2
-push constant 101
-call String.appendChar 2
-call Output.printString 1
+push local 4
+call Ending.dispose 1
 pop temp 0
-label IF_END5
 push constant 0
 return

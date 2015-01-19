@@ -1,0 +1,285 @@
+function Win.new 0
+push constant 7
+call Memory.alloc 1
+pop pointer 0
+push constant 10
+push constant 250
+push constant 5
+push constant 9
+neg
+push constant 20
+call Firework.new 5
+pop this 0
+push constant 450
+push constant 250
+push constant 4
+neg
+push constant 8
+neg
+push constant 20
+call Firework.new 5
+pop this 1
+push constant 20
+push constant 250
+push constant 1
+push constant 8
+neg
+push constant 25
+call Firework.new 5
+pop this 2
+push constant 470
+push constant 250
+push constant 2
+neg
+push constant 7
+neg
+push constant 25
+call Firework.new 5
+pop this 3
+push constant 40
+push constant 250
+push constant 6
+push constant 13
+neg
+push constant 15
+call Firework.new 5
+pop this 4
+push constant 500
+push constant 250
+push constant 5
+neg
+push constant 10
+neg
+push constant 15
+call Firework.new 5
+pop this 5
+push constant 50
+push constant 250
+push constant 10
+push constant 10
+neg
+push constant 20
+call Firework.new 5
+pop this 6
+push pointer 0
+return
+function Win.run 1
+push argument 0
+pop pointer 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 16
+push constant 18
+call Output.moveCursor 2
+pop temp 0
+push constant 27
+call String.new 1
+push constant 67
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 71
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 85
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 84
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 73
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 78
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 500
+call Sys.wait 1
+pop temp 0
+push constant 0
+pop local 0
+push this 0
+call Firework.launch 1
+pop temp 0
+label WHILE_EXP0
+push local 0
+push constant 90
+lt
+not
+if-goto WHILE_END0
+push local 0
+push constant 10
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 1
+call Firework.launch 1
+pop temp 0
+label IF_FALSE0
+push local 0
+push constant 20
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 2
+call Firework.launch 1
+pop temp 0
+label IF_FALSE1
+push local 0
+push constant 30
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 3
+call Firework.launch 1
+pop temp 0
+label IF_FALSE2
+push local 0
+push constant 40
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 4
+call Firework.launch 1
+pop temp 0
+label IF_FALSE3
+push local 0
+push constant 50
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 5
+call Firework.launch 1
+pop temp 0
+label IF_FALSE4
+push local 0
+push constant 60
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 6
+call Firework.launch 1
+pop temp 0
+label IF_FALSE5
+push this 0
+call Firework.refresh 1
+pop temp 0
+push constant 20
+call Sys.wait 1
+pop temp 0
+push this 1
+call Firework.refresh 1
+pop temp 0
+push constant 20
+call Sys.wait 1
+pop temp 0
+push this 2
+call Firework.refresh 1
+pop temp 0
+push constant 20
+call Sys.wait 1
+pop temp 0
+push this 3
+call Firework.refresh 1
+pop temp 0
+push constant 20
+call Sys.wait 1
+pop temp 0
+push this 4
+call Firework.refresh 1
+pop temp 0
+push constant 20
+call Sys.wait 1
+pop temp 0
+push this 5
+call Firework.refresh 1
+pop temp 0
+push constant 20
+call Sys.wait 1
+pop temp 0
+push this 6
+call Firework.refresh 1
+pop temp 0
+push constant 20
+call Sys.wait 1
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function Win.dispose 0
+push argument 0
+pop pointer 0
+push this 0
+call Firework.dispose 1
+pop temp 0
+push this 1
+call Firework.dispose 1
+pop temp 0
+push this 2
+call Firework.dispose 1
+pop temp 0
+push this 3
+call Firework.dispose 1
+pop temp 0
+push this 4
+call Firework.dispose 1
+pop temp 0
+push this 5
+call Firework.dispose 1
+pop temp 0
+push this 6
+call Firework.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
