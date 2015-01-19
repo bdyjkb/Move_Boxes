@@ -38,15 +38,15 @@ class Loading {
 		do Screen.setColor(true);
 
 		do Text.draw_L(x, y);
-		do Text.draw_o(x+12, y);
-		do Text.draw_a(x+21, y);
-		do Text.draw_d(x+32, y);
-		do Text.draw_i(x+43, y);
-		do Text.draw_n(x+47, y);
-		do Text.draw_g(x+59, y);
-		do Text.draw_dot(x+70, y);
-		do Text.draw_dot(x+76, y);
-		do Text.draw_dot(x+82, y);
+		do Text.draw_o(x+17, y);
+		do Text.draw_a(x+31, y);
+		do Text.draw_d(x+47, y);
+		do Text.draw_i(x+63, y);
+		do Text.draw_n(x+72, y);
+		do Text.draw_g(x+89, y);
+		do Text.draw_dot(x+105, y);
+		do Text.draw_dot(x+116, y);
+		do Text.draw_dot(x+127, y);
 		do Sys.wait(500);
 
 		let i = 0;
@@ -55,35 +55,72 @@ class Loading {
 			while(t < 17){
 				do Screen.setColor(false);
 				do Text.draw_L(x, y+wave[t+9]);
-				do Text.draw_o(x+12, y+wave[t+8]);
-				do Text.draw_a(x+21, y+wave[t+7]);
-				do Text.draw_d(x+32, y+wave[t+6]);
-				do Text.draw_i(x+43, y+wave[t+5]);
-				do Text.draw_n(x+47, y+wave[t+4]);
-				do Text.draw_g(x+59, y+wave[t+3]);
-				do Text.draw_dot(x+70, y+wave[t+2]);
-				do Text.draw_dot(x+76, y+wave[t+1]);
-				do Text.draw_dot(x+82, y+wave[t]);
+				do Screen.setColor(true);
+				do Text.draw_L(x, y+wave[t+10]);
+				do Sys.wait(5);
+
+				do Screen.setColor(false);
+				do Text.draw_o(x+17, y+wave[t+8]);
+				do Screen.setColor(true);
+				do Text.draw_o(x+17, y+wave[t+9]);
+				do Sys.wait(5);
+				
+				do Screen.setColor(false);
+				do Text.draw_a(x+31, y+wave[t+7]);
+				do Screen.setColor(true);
+				do Text.draw_a(x+31, y+wave[t+8]);
+				do Sys.wait(5);
+				
+				do Screen.setColor(false);
+				do Text.draw_d(x+47, y+wave[t+6]);
+				do Screen.setColor(true);
+				do Text.draw_d(x+47, y+wave[t+7]);
+				do Sys.wait(5);
+				
+				do Screen.setColor(false);
+				do Text.draw_i(x+63, y+wave[t+5]);
+				do Screen.setColor(true);
+				do Text.draw_i(x+63, y+wave[t+6]);
+				do Sys.wait(5);
+				
+				do Screen.setColor(false);
+				do Text.draw_n(x+72, y+wave[t+4]);
+				do Screen.setColor(true);
+				do Text.draw_n(x+72, y+wave[t+5]);
+				do Sys.wait(5);
+				
+				do Screen.setColor(false);
+				do Text.draw_g(x+89, y+wave[t+3]);
+				do Screen.setColor(true);
+				do Text.draw_g(x+89, y+wave[t+4]);
+				do Sys.wait(5);
+				
+				do Screen.setColor(false);
+				do Text.draw_dot(x+105, y+wave[t+2]);
+				do Screen.setColor(true);
+				do Text.draw_dot(x+105, y+wave[t+3]);
+				do Sys.wait(5);
+				
+				do Screen.setColor(false);
+				do Text.draw_dot(x+116, y+wave[t+1]);
+				do Screen.setColor(true);
+				do Text.draw_dot(x+116, y+wave[t+2]);
+				do Sys.wait(5);
+				
+				do Screen.setColor(false);
+				do Text.draw_dot(x+127, y+wave[t]);
+				do Screen.setColor(true);
+				do Text.draw_dot(x+127, y+wave[t+1]);
+				do Sys.wait(5);
 
 				let t = t + 1;
-
-				do Screen.setColor(true);
-				do Text.draw_L(x, y+wave[t+9]);
-				do Text.draw_o(x+12, y+wave[t+8]);
-				do Text.draw_a(x+21, y+wave[t+7]);
-				do Text.draw_d(x+32, y+wave[t+6]);
-				do Text.draw_i(x+43, y+wave[t+5]);
-				do Text.draw_n(x+47, y+wave[t+4]);
-				do Text.draw_g(x+59, y+wave[t+3]);
-				do Text.draw_dot(x+70, y+wave[t+2]);
-				do Text.draw_dot(x+76, y+wave[t+1]);
-				do Text.draw_dot(x+82, y+wave[t]);
-
-				do Sys.wait(60);
 			}
 			do Sys.wait(500);
 			let i = i + 1;
 		}
+
+		do wave.dispose();
+		
 		return;
 	}
 }

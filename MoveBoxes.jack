@@ -275,7 +275,17 @@ class MoveBoxes {
 			}
 		}
 
+		do state.dispose();
+		do player.dispose();
+		do box.dispose();
+		do wall.dispose();
+
 		return 0;
+	}
+
+	method void dispose() {
+		do Memory.deAlloc(this);
+		return;
 	}
 
 	method char getKeyPressed(){

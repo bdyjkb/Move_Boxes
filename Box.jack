@@ -46,4 +46,9 @@ class Box {
         do draw(next_x, next_y);
 		return;
     }
+
+    method void dispose(){
+    	do Memory.deAlloc(this);
+    	return;
+    }
 }

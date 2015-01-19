@@ -54,4 +54,9 @@ class Wall {
 		do Screen.drawRectangle(x, y, x+unit-1, y+unit-1);
 		return;
 	}
+
+	method void dispose(){
+		do Memory.deAlloc(this);
+		return;
+	}
 }

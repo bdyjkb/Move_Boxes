@@ -8,7 +8,7 @@ class Main {
 
 		do Opening.run(250, 0);
 
-		do Loading.run(210, 120, 3);
+		do Loading.run(190, 120, 3);
 		//arguments: x, y, times
 
 		let level = menu.run();
@@ -18,32 +18,40 @@ class Main {
 
 			if(level = 0){
 				do Switching.tutorial();
-				let game = MoveBoxes.new(8, 8, "0044400000434000004044444442123443020444444424000004340000044400", 30, 30, 20);
+				let game = MoveBoxes.new(8, 8, "0044400000434000004044444442123443020444444424000004340000044400", 40, 30, 20);
 				do game.init();
 				do Tutorial.run();
 				let pass = game.run();
+				let pass = 1;
+				do game.dispose();
 			}
 
 			if(level = 1){
 				//level 1
 				do Switching.levelOne();
-				let game = MoveBoxes.new(6, 8, "044440440040412040442044440204432004433534444444", 70, 40, 20);
+				let game = MoveBoxes.new(6, 8, "044440440040412040442044440204432004433534444444", 75, 35, 20);
 				do game.init();
+				do Sidebar.run();
 				let pass = game.run();
+				do game.dispose();
 
 				if(pass = 1){
 					//level 2
 					do Switching.levelTwo();
-					let game = MoveBoxes.new(10, 7, "0004444440044400004044302440444332020014433020204444444400400000044440", 30, 30, 20);
+					let game = MoveBoxes.new(10, 7, "0004444440044400004044302440444332020014433020204444444400400000044440", 35, 45, 20);
 					do game.init();
+					do Sidebar.run();
 					let pass =  game.run();
+					do game.dispose();
 					
 					if(pass = 1){
 						//level 3
 						do Switching.levelThree();
-						let game = MoveBoxes.new(8, 8, "0044440000433400044034400400234044020044400422044001000444444444", 30, 30, 20);
+						let game = MoveBoxes.new(8, 8, "0044440000433400044034400400234044020044400422044001000444444444", 40, 30, 20);
 						do game.init();
+						do Sidebar.run();
 						let pass = pass + game.run();
+						do game.dispose();
 					}
 				}
 			}
@@ -52,12 +60,7 @@ class Main {
 				let level = 2;
 			}
 			else{
-				if(pass = 0){
-					let level = 2;
-				}
-				else{
-					let level = menu.run();
-				}
+				let level = menu.run();
 			}
 		}
 
@@ -67,13 +70,7 @@ class Main {
 			do Output.moveCursor(12, 20);
 			do Output.printString("Congratulation! you win the game.");
 		}
-		if(pass = 1){
-			do Output.moveCursor(12, 28);
-			do Output.printString("Bye Bye");
-		}
-		if(pass = 0){
-			do Output.moveCursor(11,27);
-			do Output.printString("Game Over");
+		else{
 			do Output.moveCursor(13, 28);
 			do Output.printString("Bye Bye");
 		}

@@ -711,10 +711,10 @@ class Opening {
 		}
 		do Sys.wait(500);
 
-		let s = "Let's play   ";
+		let s = "Let's play  ";
         let n = 0;
         do Output.moveCursor(10, 6);
-		while(n < 13){
+		while(n < 12){
 			do Output.printChar(s.charAt(n));
 			let n = n + 1;
 			do Sys.wait(80);

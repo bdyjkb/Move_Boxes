@@ -38,6 +38,9 @@ class Tutorial {
 		do Img.print_box(450, 125);
 		do Img.print_player(300, 100);
 
+		do Output.moveCursor(18, 40);
+		do Output.printString("press Q to leave");
+
 		return;
 	}
 }

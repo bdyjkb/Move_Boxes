@@ -229,55 +229,55 @@ push argument 1
 call Text.draw_L 2
 pop temp 0
 push argument 0
-push constant 12
+push constant 17
 add
 push argument 1
 call Text.draw_o 2
 pop temp 0
 push argument 0
-push constant 21
+push constant 31
 add
 push argument 1
 call Text.draw_a 2
 pop temp 0
 push argument 0
-push constant 32
+push constant 47
 add
 push argument 1
 call Text.draw_d 2
 pop temp 0
 push argument 0
-push constant 43
+push constant 63
 add
 push argument 1
 call Text.draw_i 2
 pop temp 0
 push argument 0
-push constant 47
+push constant 72
 add
 push argument 1
 call Text.draw_n 2
 pop temp 0
 push argument 0
-push constant 59
+push constant 89
 add
 push argument 1
 call Text.draw_g 2
 pop temp 0
 push argument 0
-push constant 70
+push constant 105
 add
 push argument 1
 call Text.draw_dot 2
 pop temp 0
 push argument 0
-push constant 76
+push constant 116
 add
 push argument 1
 call Text.draw_dot 2
 pop temp 0
 push argument 0
-push constant 82
+push constant 127
 add
 push argument 1
 call Text.draw_dot 2
@@ -316,8 +316,30 @@ push that 0
 add
 call Text.draw_L 2
 pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
 push argument 0
-push constant 12
+push argument 1
+push local 0
+push constant 10
+add
+push local 2
+add
+pop pointer 1
+push that 0
+add
+call Text.draw_L 2
+pop temp 0
+push constant 5
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 17
 add
 push argument 1
 push local 0
@@ -330,125 +352,13 @@ push that 0
 add
 call Text.draw_o 2
 pop temp 0
-push argument 0
-push constant 21
-add
-push argument 1
-push local 0
-push constant 7
-add
-push local 2
-add
-pop pointer 1
-push that 0
-add
-call Text.draw_a 2
-pop temp 0
-push argument 0
-push constant 32
-add
-push argument 1
-push local 0
-push constant 6
-add
-push local 2
-add
-pop pointer 1
-push that 0
-add
-call Text.draw_d 2
-pop temp 0
-push argument 0
-push constant 43
-add
-push argument 1
-push local 0
-push constant 5
-add
-push local 2
-add
-pop pointer 1
-push that 0
-add
-call Text.draw_i 2
-pop temp 0
-push argument 0
-push constant 47
-add
-push argument 1
-push local 0
-push constant 4
-add
-push local 2
-add
-pop pointer 1
-push that 0
-add
-call Text.draw_n 2
-pop temp 0
-push argument 0
-push constant 59
-add
-push argument 1
-push local 0
-push constant 3
-add
-push local 2
-add
-pop pointer 1
-push that 0
-add
-call Text.draw_g 2
-pop temp 0
-push argument 0
-push constant 70
-add
-push argument 1
-push local 0
-push constant 2
-add
-push local 2
-add
-pop pointer 1
-push that 0
-add
-call Text.draw_dot 2
-pop temp 0
-push argument 0
-push constant 76
-add
-push argument 1
-push local 0
-push constant 1
-add
-push local 2
-add
-pop pointer 1
-push that 0
-add
-call Text.draw_dot 2
-pop temp 0
-push argument 0
-push constant 82
-add
-push argument 1
-push local 0
-push local 2
-add
-pop pointer 1
-push that 0
-add
-call Text.draw_dot 2
-pop temp 0
-push local 0
-push constant 1
-add
-pop local 0
 push constant 0
 not
 call Screen.setColor 1
 pop temp 0
 push argument 0
+push constant 17
+add
 push argument 1
 push local 0
 push constant 9
@@ -458,24 +368,16 @@ add
 pop pointer 1
 push that 0
 add
-call Text.draw_L 2
-pop temp 0
-push argument 0
-push constant 12
-add
-push argument 1
-push local 0
-push constant 8
-add
-push local 2
-add
-pop pointer 1
-push that 0
-add
 call Text.draw_o 2
 pop temp 0
+push constant 5
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
 push argument 0
-push constant 21
+push constant 31
 add
 push argument 1
 push local 0
@@ -488,8 +390,32 @@ push that 0
 add
 call Text.draw_a 2
 pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
 push argument 0
-push constant 32
+push constant 31
+add
+push argument 1
+push local 0
+push constant 8
+add
+push local 2
+add
+pop pointer 1
+push that 0
+add
+call Text.draw_a 2
+pop temp 0
+push constant 5
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 47
 add
 push argument 1
 push local 0
@@ -502,8 +428,32 @@ push that 0
 add
 call Text.draw_d 2
 pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
 push argument 0
-push constant 43
+push constant 47
+add
+push argument 1
+push local 0
+push constant 7
+add
+push local 2
+add
+pop pointer 1
+push that 0
+add
+call Text.draw_d 2
+pop temp 0
+push constant 5
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 63
 add
 push argument 1
 push local 0
@@ -516,8 +466,32 @@ push that 0
 add
 call Text.draw_i 2
 pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
 push argument 0
-push constant 47
+push constant 63
+add
+push argument 1
+push local 0
+push constant 6
+add
+push local 2
+add
+pop pointer 1
+push that 0
+add
+call Text.draw_i 2
+pop temp 0
+push constant 5
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 72
 add
 push argument 1
 push local 0
@@ -530,8 +504,32 @@ push that 0
 add
 call Text.draw_n 2
 pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
 push argument 0
-push constant 59
+push constant 72
+add
+push argument 1
+push local 0
+push constant 5
+add
+push local 2
+add
+pop pointer 1
+push that 0
+add
+call Text.draw_n 2
+pop temp 0
+push constant 5
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 89
 add
 push argument 1
 push local 0
@@ -544,8 +542,32 @@ push that 0
 add
 call Text.draw_g 2
 pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
 push argument 0
-push constant 70
+push constant 89
+add
+push argument 1
+push local 0
+push constant 4
+add
+push local 2
+add
+pop pointer 1
+push that 0
+add
+call Text.draw_g 2
+pop temp 0
+push constant 5
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 105
 add
 push argument 1
 push local 0
@@ -558,8 +580,32 @@ push that 0
 add
 call Text.draw_dot 2
 pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
 push argument 0
-push constant 76
+push constant 105
+add
+push argument 1
+push local 0
+push constant 3
+add
+push local 2
+add
+pop pointer 1
+push that 0
+add
+call Text.draw_dot 2
+pop temp 0
+push constant 5
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 116
 add
 push argument 1
 push local 0
@@ -572,8 +618,32 @@ push that 0
 add
 call Text.draw_dot 2
 pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
 push argument 0
-push constant 82
+push constant 116
+add
+push argument 1
+push local 0
+push constant 2
+add
+push local 2
+add
+pop pointer 1
+push that 0
+add
+call Text.draw_dot 2
+pop temp 0
+push constant 5
+call Sys.wait 1
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 127
 add
 push argument 1
 push local 0
@@ -584,9 +654,31 @@ push that 0
 add
 call Text.draw_dot 2
 pop temp 0
-push constant 60
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 0
+push constant 127
+add
+push argument 1
+push local 0
+push constant 1
+add
+push local 2
+add
+pop pointer 1
+push that 0
+add
+call Text.draw_dot 2
+pop temp 0
+push constant 5
 call Sys.wait 1
 pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
 goto WHILE_EXP1
 label WHILE_END1
 push constant 500
@@ -598,5 +690,8 @@ add
 pop local 1
 goto WHILE_EXP0
 label WHILE_END0
+push local 2
+call Array.dispose 1
+pop temp 0
 push constant 0
 return

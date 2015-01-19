@@ -9698,7 +9698,7 @@ label WHILE_END1
 push constant 500
 call Sys.wait 1
 pop temp 0
-push constant 13
+push constant 12
 call String.new 1
 push constant 76
 call String.appendChar 2
@@ -9724,8 +9724,6 @@ push constant 32
 call String.appendChar 2
 push constant 32
 call String.appendChar 2
-push constant 32
-call String.appendChar 2
 pop local 0
 push constant 0
 pop local 1
@@ -9735,7 +9733,7 @@ call Output.moveCursor 2
 pop temp 0
 label WHILE_EXP2
 push local 1
-push constant 13
+push constant 12
 lt
 not
 if-goto WHILE_END2

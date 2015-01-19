@@ -37,11 +37,6 @@ class Menu {
 		return 2;
 	}
 
-	method void draw_title(int x, int y){
-		//
-		return;
-	}
-
 	method void draw_selection(int s) {
 		if(s = 0) {
 			do Screen.setColor(true);
@@ -98,6 +93,11 @@ class Menu {
 		do Text.draw_a(x+10, y);
 		do Text.draw_m(x+21, y);
 		do Text.draw_e(x+35, y);
+		return;
+	}
+
+	method void dispose(){
+		do Memory.deAlloc(this);
 		return;
 	}
 }

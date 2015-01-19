@@ -160,4 +160,9 @@ class Player {
 	method int get_y(){
 		return y;
 	}
+
+	method void dispose(){
+		do Memory.deAlloc(this);
+		return;
+	}
 }

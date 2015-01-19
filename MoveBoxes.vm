@@ -1301,6 +1301,26 @@ pop local 1
 label IF_FALSE28
 goto WHILE_EXP0
 label WHILE_END0
+push this 6
+call State.dispose 1
+pop temp 0
+push this 3
+call Player.dispose 1
+pop temp 0
+push this 5
+call Box.dispose 1
+pop temp 0
+push this 4
+call Wall.dispose 1
+pop temp 0
+push constant 0
+return
+function MoveBoxes.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
 push constant 0
 return
 function MoveBoxes.getKeyPressed 1
