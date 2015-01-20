@@ -15,15 +15,21 @@ class State {
     }
 
     method void print() {
+        var String s, l;
+        let s = "Steps:";
+        let l = " Left:";
         do Screen.setColor(false);
         do Screen.drawRectangle(5, 225, 506, 250);
      
         do Output.moveCursor(21, 2);
-        do Output.printString("Steps:");
+        do Output.printString(s);
         do Output.printInt(step);
 
-        do Output.printString(" Left:");
+        do Output.printString(l);
         do Output.printInt(cnt);
+
+        do s.dispose();
+        do l.dispose();
 
         return ;
     }
@@ -45,11 +51,15 @@ class State {
     }
 
     method void warn(String w) {
+        var String warn;
+        let warn = "  Warn:";
         do print();
 
-        do Output.printString("  Warn:");
+        do Output.printString(warn);
         do Output.printString(w);
 
+        do warn.dispose();
+        do w.dispose();
         return ;
     }
 
