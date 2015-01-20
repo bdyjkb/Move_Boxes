@@ -1,7 +1,4 @@
-function Win.new 0
-push constant 7
-call Memory.alloc 1
-pop pointer 0
+function Win.run 15
 push constant 10
 push constant 250
 push constant 5
@@ -9,7 +6,7 @@ push constant 9
 neg
 push constant 20
 call Firework.new 5
-pop this 0
+pop local 8
 push constant 450
 push constant 250
 push constant 4
@@ -18,7 +15,7 @@ push constant 8
 neg
 push constant 20
 call Firework.new 5
-pop this 1
+pop local 9
 push constant 20
 push constant 250
 push constant 1
@@ -26,7 +23,7 @@ push constant 8
 neg
 push constant 25
 call Firework.new 5
-pop this 2
+pop local 10
 push constant 470
 push constant 250
 push constant 2
@@ -35,7 +32,7 @@ push constant 7
 neg
 push constant 25
 call Firework.new 5
-pop this 3
+pop local 11
 push constant 40
 push constant 250
 push constant 6
@@ -43,7 +40,7 @@ push constant 13
 neg
 push constant 15
 call Firework.new 5
-pop this 4
+pop local 12
 push constant 500
 push constant 250
 push constant 5
@@ -52,7 +49,7 @@ push constant 10
 neg
 push constant 15
 call Firework.new 5
-pop this 5
+pop local 13
 push constant 50
 push constant 250
 push constant 10
@@ -60,12 +57,7 @@ push constant 10
 neg
 push constant 20
 call Firework.new 5
-pop this 6
-push pointer 0
-return
-function Win.run 8
-push argument 0
-pop pointer 0
+pop local 14
 call Screen.clearScreen 0
 pop temp 0
 push constant 300
@@ -190,7 +182,7 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 pop local 0
-push this 0
+push local 8
 call Firework.launch 1
 pop temp 0
 label WHILE_EXP1
@@ -205,7 +197,7 @@ eq
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
-push this 1
+push local 9
 call Firework.launch 1
 pop temp 0
 label IF_FALSE0
@@ -215,7 +207,7 @@ eq
 if-goto IF_TRUE1
 goto IF_FALSE1
 label IF_TRUE1
-push this 2
+push local 10
 call Firework.launch 1
 pop temp 0
 label IF_FALSE1
@@ -225,7 +217,7 @@ eq
 if-goto IF_TRUE2
 goto IF_FALSE2
 label IF_TRUE2
-push this 3
+push local 11
 call Firework.launch 1
 pop temp 0
 label IF_FALSE2
@@ -235,7 +227,7 @@ eq
 if-goto IF_TRUE3
 goto IF_FALSE3
 label IF_TRUE3
-push this 4
+push local 12
 call Firework.launch 1
 pop temp 0
 label IF_FALSE3
@@ -245,7 +237,7 @@ eq
 if-goto IF_TRUE4
 goto IF_FALSE4
 label IF_TRUE4
-push this 5
+push local 13
 call Firework.launch 1
 pop temp 0
 label IF_FALSE4
@@ -255,47 +247,47 @@ eq
 if-goto IF_TRUE5
 goto IF_FALSE5
 label IF_TRUE5
-push this 6
+push local 14
 call Firework.launch 1
 pop temp 0
 label IF_FALSE5
-push this 0
+push local 8
 call Firework.refresh 1
 pop temp 0
 push constant 20
 call Sys.wait 1
 pop temp 0
-push this 1
+push local 9
 call Firework.refresh 1
 pop temp 0
 push constant 20
 call Sys.wait 1
 pop temp 0
-push this 2
+push local 10
 call Firework.refresh 1
 pop temp 0
 push constant 20
 call Sys.wait 1
 pop temp 0
-push this 3
+push local 11
 call Firework.refresh 1
 pop temp 0
 push constant 20
 call Sys.wait 1
 pop temp 0
-push this 4
+push local 12
 call Firework.refresh 1
 pop temp 0
 push constant 20
 call Sys.wait 1
 pop temp 0
-push this 5
+push local 13
 call Firework.refresh 1
 pop temp 0
 push constant 20
 call Sys.wait 1
 pop temp 0
-push this 6
+push local 14
 call Firework.refresh 1
 pop temp 0
 push constant 20
@@ -307,34 +299,26 @@ add
 pop local 0
 goto WHILE_EXP1
 label WHILE_END1
-push constant 0
-return
-function Win.dispose 0
-push argument 0
-pop pointer 0
-push this 0
+push local 8
 call Firework.dispose 1
 pop temp 0
-push this 1
+push local 9
 call Firework.dispose 1
 pop temp 0
-push this 2
+push local 10
 call Firework.dispose 1
 pop temp 0
-push this 3
+push local 11
 call Firework.dispose 1
 pop temp 0
-push this 4
+push local 12
 call Firework.dispose 1
 pop temp 0
-push this 5
+push local 13
 call Firework.dispose 1
 pop temp 0
-push this 6
+push local 14
 call Firework.dispose 1
-pop temp 0
-push pointer 0
-call Memory.deAlloc 1
 pop temp 0
 push constant 0
 return

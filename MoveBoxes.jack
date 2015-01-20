@@ -265,7 +265,6 @@ class MoveBoxes {
 			if(box_cnt = 0) {
 				do Sys.wait(1500);
 				// Yisheng Lin add this line, for keep game a moment.
-				do Screen.clearScreen();
 				return 1;
 			}
 

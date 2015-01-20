@@ -1,11 +1,7 @@
 class Ending{
-	field int x, y;
-
-	constructor Ending new(){
-		return this;
-	}
-	
-	method void run(){
+	function void run(){
+		var int x, y;
+		
 		do Screen.clearScreen();
 		do Screen.setColor(true);
 		let x = 260;
@@ -426,11 +422,6 @@ do Screen.drawLine(x+88, y+39, x+91, y+39);
 do Screen.drawLine(x+33, y+40, x+36, y+40);
 do Screen.drawLine(x+88, y+40, x+91, y+40);
 do Screen.drawLine(x+33, y+41, x+35, y+41);
-		return;
-	}
-
-	method void dispose(){
-		do Memory.deAlloc(this);
 		return;
 	}
 }

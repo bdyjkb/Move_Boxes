@@ -1,12 +1,12 @@
-function Main.main 7
+function Main.main 5
 push constant 250
 push constant 0
 call Opening.new 2
-pop local 3
-push local 3
+pop local 2
+push local 2
 call Opening.run 1
 pop temp 0
-push local 3
+push local 2
 call Opening.dispose 1
 pop temp 0
 push constant 190
@@ -16,17 +16,17 @@ call Loading.run 3
 pop temp 0
 push local 1
 call Menu.run 1
-pop local 5
+pop local 3
 label WHILE_EXP0
-push local 5
+push local 3
 push constant 2
 eq
 not
 not
 if-goto WHILE_END0
 push constant 0
-pop local 6
-push local 5
+pop local 4
+push local 3
 push constant 0
 eq
 if-goto IF_TRUE0
@@ -64,7 +64,7 @@ push constant 32
 call String.appendChar 2
 push constant 76
 call String.appendChar 2
-push constant 10
+push constant 11
 push constant 24
 call Switching.run 3
 pop temp 0
@@ -212,14 +212,14 @@ call Tutorial.run 0
 pop temp 0
 push local 0
 call MoveBoxes.run 1
-pop local 6
+pop local 4
 push constant 1
-pop local 6
+pop local 4
 push local 0
 call MoveBoxes.dispose 1
 pop temp 0
 label IF_FALSE0
-push local 5
+push local 3
 push constant 1
 eq
 if-goto IF_TRUE1
@@ -261,7 +261,7 @@ push constant 32
 call String.appendChar 2
 push constant 69
 call String.appendChar 2
-push constant 10
+push constant 11
 push constant 23
 call Switching.run 3
 pop temp 0
@@ -377,11 +377,11 @@ call Sidebar.run 0
 pop temp 0
 push local 0
 call MoveBoxes.run 1
-pop local 6
+pop local 4
 push local 0
 call MoveBoxes.dispose 1
 pop temp 0
-push local 6
+push local 4
 push constant 1
 eq
 if-goto IF_TRUE2
@@ -423,7 +423,7 @@ push constant 32
 call String.appendChar 2
 push constant 79
 call String.appendChar 2
-push constant 10
+push constant 11
 push constant 23
 call Switching.run 3
 pop temp 0
@@ -583,11 +583,11 @@ call Sidebar.run 0
 pop temp 0
 push local 0
 call MoveBoxes.run 1
-pop local 6
+pop local 4
 push local 0
 call MoveBoxes.dispose 1
 pop temp 0
-push local 6
+push local 4
 push constant 1
 eq
 if-goto IF_TRUE3
@@ -637,7 +637,7 @@ push constant 32
 call String.appendChar 2
 push constant 69
 call String.appendChar 2
-push constant 10
+push constant 11
 push constant 21
 call Switching.run 3
 pop temp 0
@@ -783,60 +783,48 @@ call MoveBoxes.init 1
 pop temp 0
 call Sidebar.run 0
 pop temp 0
-push local 6
+push local 4
 push local 0
 call MoveBoxes.run 1
 add
-pop local 6
+pop local 4
 push local 0
 call MoveBoxes.dispose 1
 pop temp 0
 label IF_FALSE3
 label IF_FALSE2
 label IF_FALSE1
-push local 6
+push local 4
 push constant 2
 eq
 if-goto IF_TRUE4
 goto IF_FALSE4
 label IF_TRUE4
 push constant 2
-pop local 5
+pop local 3
 goto IF_END4
 label IF_FALSE4
 push local 1
 call Menu.run 1
-pop local 5
+pop local 3
 label IF_END4
 goto WHILE_EXP0
 label WHILE_END0
 call Screen.clearScreen 0
 pop temp 0
-push local 6
+push local 4
 push constant 2
 eq
 if-goto IF_TRUE5
 goto IF_FALSE5
 label IF_TRUE5
-call Win.new 0
-pop local 2
-push local 2
-call Win.run 1
-pop temp 0
-push local 2
-call Win.dispose 1
+call Win.run 0
 pop temp 0
 label IF_FALSE5
-call Ending.new 0
-pop local 4
-push local 4
-call Ending.run 1
+call Ending.run 0
 pop temp 0
 push constant 2000
 call Sys.wait 1
-pop temp 0
-push local 4
-call Ending.dispose 1
 pop temp 0
 push constant 0
 return

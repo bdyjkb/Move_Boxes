@@ -1,32 +1,41 @@
 class Switching {
 
 	function void run(String s, int r, int c){
-		var int len, half_len, i;
-		let len = s.length();
-		let half_len = len / 2;
+		var int i, x, y;
+		do Screen.setColor(true);
 		let i = 0;
-		do Screen.clearScreen();
-		while(i < half_len){
-			do Output.moveCursor(r, c+i);
-			do Output.printChar(s.charAt(i));
-			do Sys.wait(50);
-			do Output.moveCursor(r, c+len-1-i);
-			do Output.printChar(s.charAt(len-i-1));
-			do Sys.wait(50);
+		while(i < 128){
+			do Screen.drawRectangle(0+(2*i), i, 0+(2*i)+1, 255-i);
+			do Screen.drawRectangle(511-(2*i)-1, i, 511-(2*i), 255-i);
+			do Screen.drawLine(0+(2*i), i, 511-(2*i), i);
+			do Screen.drawLine(0+(2*i), 255-i, 511-(2*i), 255-i);
+			do Sys.wait(10);
 			let i = i + 1;
 		}
-		if((len - ((len/2)*2)) = 0){
-			do Output.moveCursor(r, c+half_len-1);
-			do Output.printChar(s.charAt(half_len-1));
-			do Sys.wait(50);
-			do Output.moveCursor(r, c+half_len);
-			do Output.printChar(s.charAt(half_len));
+
+		do Screen.setColor(false);
+		let i = 0;
+		while(i < 120){
+			do Screen.drawLine(0, i, 511, i);
+			do Screen.drawLine(0, 255-i, 511, 255-i);
+			do Sys.wait(10);
+			let i = i + 1;
 		}
-		else{
-			do Output.moveCursor(r, c+half_len);
-			do Output.printChar(s.charAt(half_len));
+		let i = 9;
+		while(i > 0){
+			do Screen.setColor(false);
+			do Screen.drawRectangle(0, 127-i, 511, 127+i);
+			do Output.moveCursor(r, c);
+			do Output.printString(s);
+			let i = i - 1;
+			do Screen.setColor(true);
+			do Screen.drawRectangle(0, 127-i, 511, 127+i);
+			do Sys.wait(15);
 		}
-		do Sys.wait(1000);
+		do Screen.clearScreen();
+		do Output.moveCursor(r, c);
+		do Output.printString(s);
+		do Sys.wait(1500);
 		return;
 	}
 
